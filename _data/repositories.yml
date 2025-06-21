@@ -1,14 +1,14 @@
 github_users:
-  - torvalds
-  - alshedivat
+  - chrhenning
+  - ChrisEthon
 
 repo_description_lines_max: 2
 
 github_repos:
-  - alshedivat/al-folio
-  - jekyll/jekyll
-  - twbs/bootstrap
-  - jquery/jquery
-  - FortAwesome/Font-Awesome
-  - mathjax/MathJax
-  - jpswalsh/academicons
+  - chrhenning/hypnettorch
+  - chrhenning/posterior_replay_cl
+  - chrhenning/uncertainty_based_ood
+  - chrhenning/snn_global_pattern_induction
+  - mariacer/cl_in_rnns
+  - chrhenning/hypercl
+  - chrhenning/experimental_setups
