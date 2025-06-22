@@ -2,7 +2,7 @@
 layout: about
 title: about
 permalink: /
-subtitle: <a href='#'>Affiliations</a>. Address. Contacts. Motto. Etc.
+subtitle: ML Researcher & Engineer @ <a href='https://ethon.ai'>EthonAI</a>.
 
 profile:
   align: right
