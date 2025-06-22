@@ -1,9 +1,26 @@
-"AJP":
-  url: https://aapt.scitation.org/journal/ajp
+"ICLR 2020":
+  url: https://iclr.cc/Conferences/2020
   color: "#00369f"
 
-"PhysRev":
-  url: https://journals.aps.org/
+"ICLR 2021":
+  url: https://iclr.cc/Conferences/2021
+  color: "#00369f"
 
-"Vision":
+"NeurIPS 2021":
+  url: https://neurips.cc/Conferences/2021
   color: "#009f36"
+
+"NIPS 2018 BDL":
+  url: https://bayesiandeeplearning.org/2018/
+  color: "#009f36"
+
+"ICMR 2017":
+  color: "#689f00"
+
+"ICML 2021 UDL":
+  url: https://sites.google.com/view/udlworkshop2021/home
+  color: "#9f3700"
+
+"NeurIPS 2021 Bayes":
+  url: https://sites.google.com/view/robustbayes-neurips21/home
+  color: "#9f8700"
