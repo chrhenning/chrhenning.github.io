@@ -11,7 +11,7 @@ contact_note: >
 description: > # the ">" symbol means to ignore newlines until "footer_text:"
   Personal website of Christian Henning, machine learning researcher focused on industrial AI, continual learning, uncertainty estimation, and the neuroscience of intelligent systems. Currently working on real-world vision applications in industry.
 footer_text: >
-  Powered by <a href="https://jekyllrb.com/" target="_blank">Jekyll</a> using <a href="https://github.com/alshedivat/al-folio">al-folio</a>. Hosted on <a href="https://pages.github.com/" target="_blank">GitHub Pages</a>.
+  Powered by <a href="https://jekyllrb.com/" target="_blank">Jekyll</a> using <a href="https://github.com/alshedivat/al-folio">al-folio</a>. Hosted on <a href="https://pages.github.com/" target="_blank">GitHub Pages</a>. <a href="/privacy">Privacy Policy</a>.
 keywords: christian henning, continual learning, bayesian neural networks, machine learning, computer vision, ai research # add your own keywords or leave empty
 lang: en # the language of your site (for example: en, fr, cn, ru, etc.)
 icon: 🧠 # the emoji used as the favicon (alternatively, provide image name in /assets/img/)
