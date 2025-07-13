@@ -3,7 +3,6 @@
     "name": "Christian Henning",
     "label": "Machine Learning Researcher & R&D Lead",
     "image": "",
-    "url": "https://chrhenning.github.io",
     "summary": "AI expert with a PhD from ETH Zurich, specializing in computer vision, uncertainty and lifelong learning. Currently leading R&D at EthonAI.",
     "location": {
       "city": "Zurich",
@@ -33,6 +32,7 @@
       "name": "EthonAI",
       "position": "Senior Research Scientist",
       "url": "https://ethon.ai",
+      "location": "Zurich, Switzerland",
       "startDate": "2025-01-01",
       "summary": "Spearheading EthonAI’s internal research and development initiatives to advance applied AI in industrial settings."
     },
@@ -40,6 +40,7 @@
       "name": "EthonAI",
       "position": "Product Owner",
       "url": "https://ethon.ai",
+      "location": "Zurich, Switzerland",
       "startDate": "2023-03-01",
       "endDate": "2024-12-31",
       "summary": "Led the development of an AI-powered product for industrial anomaly detection, balancing software engineering, algorithmic innovation, and cross-functional leadership.",
@@ -53,6 +54,7 @@
       "name": "EthonAI",
       "position": "Machine Learning Engineer",
       "url": "https://ethon.ai",
+      "location": "Zurich, Switzerland",
       "startDate": "2022-03-01",
       "endDate": "2023-02-28",
       "summary": "Joined as one of the first employees at EthonAI, playing a pivotal role in the initial development of its computer vision product stack.",
@@ -66,6 +68,7 @@
       "name": "ETH Zurich",
       "position": "Research Assistant (PhD)",
       "url": "https://ethz.ch",
+      "location": "Zurich, Switzerland",
       "startDate": "2017-03-01",
       "endDate": "2022-02-28",
       "summary": "PhD in machine learning and computational neuroscience, working in an interdisciplinary environment.",
@@ -82,6 +85,7 @@
       "url": "https://ethz.ch",
       "area": "Machine Learning / Computational Neuroscience",
       "studyType": "PhD",
+      "location": "Zurich, Switzerland",
       "startDate": "2017-03-01",
       "endDate": "2022-02-28",
       "score": "",
@@ -93,6 +97,7 @@
       "url": "https://www.uni-hannover.de/",
       "area": "Computer Science",
       "studyType": "MSc",
+      "location": "Hannover, Germany",
       "startDate": "2014-10-01",
       "endDate": "2017-01-01",
       "score": "1.0/1.0",
@@ -102,6 +107,7 @@
       "institution": "Purdue University",
       "url": "https://www.purdue.edu/",
       "area": "Computer Science",
+      "location": "West Lafayette, USA",
       "studyType": "MSc (Semester Abroad)",
       "startDate": "2016-01-01",
       "endDate": "2016-05-01",
@@ -111,6 +117,7 @@
       "institution": "Leibniz Universität Hannover",
       "area": "Computer Science",
       "studyType": "BSc",
+      "location": "Hannover, Germany",
       "startDate": "2011-10-01",
       "endDate": "2014-07-01",
       "score": "1.2/1.0",
@@ -185,18 +192,7 @@
     {
       "name": "MLOps & Systems",
       "level": "Advanced",
-      "keywords": [
-        "AWS",
-        "Buildkite",
-        "DVC",
-        "GitHub Actions",
-        "Google Cloud",
-        "MQTT",
-        "ONNX",
-        "PostgreSQL",
-        "PyTorch",
-        "SLURM"
-      ]
+      "keywords": ["AWS", "Buildkite", "DVC", "GitHub Actions", "Google Cloud", "MQTT", "ONNX", "PostgreSQL", "PyTorch", "SLURM"]
     }
   ],
   "languages": [
