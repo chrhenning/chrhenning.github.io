@@ -17,12 +17,12 @@ authors:
       name: Personal Blog
 
 toc:
-- name: Defining 'Reasoning' and 'Thinking'
-- name: The Limits of Human Introspection
-- name: Machine Psychology - An Alternative View
-- name: Alignment, Interpretability, and Misleading Signals
-- name: A Call for Scientific Rigor
-- name: Concluding Thoughts
+  - name: Defining 'Reasoning' and 'Thinking'
+  - name: The Limits of Human Introspection
+  - name: Machine Psychology - An Alternative View
+  - name: Alignment, Interpretability, and Misleading Signals
+  - name: A Call for Scientific Rigor
+  - name: Concluding Thoughts
 ---
 
 In this post, I discuss a recent paper, <d-cite key="kambhampati2025stop"></d-cite>, which challenges the habit of **anthropomorphizing intermediate token traces** in large reasoning models (LRMs) — often misleadingly described as "reasoning" or "thinking" traces.
@@ -31,11 +31,11 @@ My goal here is not to summarize the paper (it’s worth reading in full), but t
 
 ## Terminology: Reasoning and Thinking
 
-Debates about anthropomorphic terms like *“reasoning”* or *“consciousness”* are futile without clear definitions — these words are subjective, overloaded, and often understood differently by each participant. I’ve been part of countless unproductive discussions that boiled down to mismatched interpretations of these terms.
+Debates about anthropomorphic terms like _“reasoning”_ or _“consciousness”_ are futile without clear definitions — these words are subjective, overloaded, and often understood differently by each participant. I’ve been part of countless unproductive discussions that boiled down to mismatched interpretations of these terms.
 
 Standard definitions of [thinking](https://en.wikipedia.org/wiki/Thought) and [reasoning](https://en.wikipedia.org/wiki/Reason) remain vague. Broadly speaking, thinking is considered an umbrella concept encompassing both intuitive and deliberate mental processes, whereas reasoning refers more narrowly to structured, logical inference.
 
-The paper briefly references Daniel Kahneman’s book [Thinking, Fast and Slow](https://en.wikipedia.org/wiki/Thinking,_Fast_and_Slow), which distinguishes between *System 1* (fast, automatic, heuristic-driven) and *System 2* (slow, effortful, and logical) thinking.
+The paper briefly references Daniel Kahneman’s book [Thinking, Fast and Slow](https://en.wikipedia.org/wiki/Thinking,_Fast_and_Slow), which distinguishes between _System 1_ (fast, automatic, heuristic-driven) and _System 2_ (slow, effortful, and logical) thinking.
 
 To my knowledge, cognitive science and psychology offer no universally accepted definitions of these concepts. I therefore adopt the System 1 vs. System 2 framework as an intuitive guide, assuming that LLMs already excel at System 1-like capabilities (fast pattern-matching and intuition), whereas LRMs aim to extend them with System 2-style reasoning abilities.
 
@@ -43,9 +43,9 @@ Unlike System 1-like pattern recognition, System 2-style reasoning requires stru
 
 ## Can We Express Thoughts in Natural Language?
 
-This raises an immediate question: how can we reliably retrieve reasoning chains from humans themselves? To do so, we would need humans to recall and verbalize their thought processes in natural language. However, as noted by Kambhampati et al., the well-known paper *"Telling More Than We Can Know: Verbal Reports on Mental Processes"* <d-cite key="nisbett1977telling"></d-cite> challenges the belief that humans can accurately do this.
+This raises an immediate question: how can we reliably retrieve reasoning chains from humans themselves? To do so, we would need humans to recall and verbalize their thought processes in natural language. However, as noted by Kambhampati et al., the well-known paper _"Telling More Than We Can Know: Verbal Reports on Mental Processes"_ <d-cite key="nisbett1977telling"></d-cite> challenges the belief that humans can accurately do this.
 
-The term [introspection illusion](https://en.wikipedia.org/wiki/Introspection_illusion) refers to the *"cognitive bias in which people wrongly think they have direct insight into the origins of their mental states"*. Because we often lack conscious access to higher-order mental processes, our explanations for why we think or act in certain ways are frequently constructed post hoc — relying on confabulated causal theories rather than genuine insight.
+The term [introspection illusion](https://en.wikipedia.org/wiki/Introspection_illusion) refers to the _"cognitive bias in which people wrongly think they have direct insight into the origins of their mental states"_. Because we often lack conscious access to higher-order mental processes, our explanations for why we think or act in certain ways are frequently constructed post hoc — relying on confabulated causal theories rather than genuine insight.
 
 In short, **when people explain their own thoughts, they are often confabulating — constructing plausible narratives rather than reporting true internal processes.**
 
@@ -64,8 +64,8 @@ Most people easily recognize the abstract analogy that connects biological and a
 
 Historically, human cognition has been studied along two orthogonal lines: neuroscience, which aims to understand the biological mechanisms, and psychology, which focuses on external behavior. The paper argues for a similar split when studying artificial systems:
 
-- *Neuroscience &harr; Mechanistic Interpretability* (dissecting the network’s structure and activations)
-- *Psychology &harr; Machine Psychology* (observing the model’s behavior through experiments).
+- _Neuroscience &harr; Mechanistic Interpretability_ (dissecting the network’s structure and activations)
+- _Psychology &harr; Machine Psychology_ (observing the model’s behavior through experiments).
 
 The analogy to machine psychology highlights why looking into a model’s "mind" is both difficult — and perhaps fundamentally misguided.
 
