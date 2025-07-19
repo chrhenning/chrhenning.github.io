@@ -84,8 +84,8 @@ bing_site_verification: # out your bing-site-verification ID (Bing Webmaster)
 # Blog
 # -----------------------------------------------------------------------------
 
-blog_name: al-folio # blog_name will be displayed in your blog page
-blog_description: a simple whitespace theme for academics
+blog_name: Things I Think About # blog_name will be displayed in your blog page
+blog_description: From research to real-world deployment
 permalink: /blog/:year/:title/
 lsi: false # produce an index for related posts
 
@@ -100,10 +100,10 @@ related_blog_posts:
 # Giscus comments (RECOMMENDED)
 # Follow instructions on https://giscus.app/ to setup for your repo to fill out the information below.
 giscus:
-  repo: # <your-github-user-name>/<your-github-repo-name>
-  repo_id: # leave empty or specify your repo_id (see https://giscus.app/)
-  category: Comments # name of the category under which discussions will be created
-  category_id: # leave empty or specify your category_id (see https://giscus.app/)
+  repo: chrhenning/chrhenning.github.io # <your-github-user-name>/<your-github-repo-name>
+  repo_id: R_kgDOO_bUZA # leave empty or specify your repo_id (see https://giscus.app/)
+  category: Announcements # name of the category under which discussions will be created
+  category_id: DIC_kwDOO_bUZM4Cs5UO # leave empty or specify your category_id (see https://giscus.app/)
   mapping: title # identify discussions by post title
   strict: 1 # use strict identification mode
   reactions_enabled: 1 # enable (1) or disable (0) emoji reactions
@@ -169,12 +169,10 @@ kramdown:
 include: ["_pages", "_scripts"]
 exclude:
   - _news/announcement_*.md
-  - _pages/blog.md
   - _pages/dropdown.md
   - _pages/profiles.md
   - _pages/projects.md
   - _pages/teaching.md
-  - _posts/
   - _projects/?_project.md
   - assets/jupyter/blog.ipynb
   - bin/
@@ -260,8 +258,8 @@ jekyll-archives:
   books:
     enabled: [year, tags, categories] # enables year, tag and category archives (remove if you need to disable one of them).
 
-display_tags: ["formatting", "images", "links", "math", "code", "blockquotes"] # these tags will be displayed on the front page of your blog
-display_categories: ["external-services"] # these categories will be displayed on the front page of your blog
+display_tags: ["ml", "statistics"] # these tags will be displayed on the front page of your blog
+display_categories: ["machine-learning"] # these categories will be displayed on the front page of your blog
 
 # -----------------------------------------------------------------------------
 # Jekyll Scholar

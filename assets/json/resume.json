@@ -192,7 +192,7 @@
     {
       "name": "MLOps & Systems",
       "level": "Advanced",
-      "keywords": ["AWS", "Buildkite", "DVC", "GitHub Actions", "Google Cloud", "MQTT", "ONNX", "PostgreSQL", "PyTorch", "SLURM"]
+      "keywords": ["AWS", "Buildkite", "Docker", "DVC", "GitHub Actions", "Google Cloud", "MQTT", "ONNX", "PostgreSQL", "PyTorch", "SLURM"]
     }
   ],
   "languages": [

@@ -2,6 +2,7 @@
 <html>
   <head>
     {% include head.liquid %}
+    <link rel="stylesheet" href="{{ '/assets/css/custom.css' | relative_url }}">
 
     <!-- Distill js -->
     <script src="{{ '/assets/js/distillpub/template.v2.js' | relative_url }}"></script>
@@ -92,6 +93,13 @@
       </d-article>
 
       <d-appendix>
+        <!-- Custom disclaimer -->
+        <h3 style="grid-column: page-start / text-start;">Disclaimer</h3>
+        <p style="grid-column: text; font-weight: 500; color: rgba(0,0,0,0.5);">
+          The views expressed are my own and do not represent those of any employer, collaborator, or institution.
+          Content may contain errors or outdated interpretations.
+        </p>
+
         <d-footnote-list></d-footnote-list>
         <d-citation-list></d-citation-list>
       </d-appendix>
