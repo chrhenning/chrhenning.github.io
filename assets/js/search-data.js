@@ -37,7 +37,18 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/cv/";
           },
-        },{id: "post-on-anthropomorphizing-token-traces",
+        },{id: "post-why-an-mse-loss-might-make-your-self-driving-car-crash",
+        
+          title: "Why an MSE Loss Might Make Your Self-Driving Car Crash",
+        
+        description: "This article explains why using MSE to train steering angle prediction can be a recipe for disaster.",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2025/when-mse-loss-leads-to-mis-steering/";
+          
+        },
+      },{id: "post-on-anthropomorphizing-token-traces",
         
           title: "On Anthropomorphizing Token Traces",
         
