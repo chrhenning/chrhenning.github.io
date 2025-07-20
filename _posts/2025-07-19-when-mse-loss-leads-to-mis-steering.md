@@ -50,7 +50,6 @@ This is a problem, because we are not interested in the mean of $$p(y \mid x)$$,
 
 In the figure below, a highway lane splits into two: the driver can either turn left or right ($$p(y \mid x)$$ is bimodal). The mean of these choices points right in-between the two lanes.
 
-
 <div class="row mt-3 justify-content-center">
     <div class="col-md-6 col-sm-8 mt-3 mt-md-0">
         {% include figure.liquid loading="eager" path="assets/img//posts/steering_angle_illustration.pdf" class="img-fluid rounded z-depth-1" %}
