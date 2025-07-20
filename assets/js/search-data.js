@@ -70,12 +70,7 @@ ninja.data = [{
             window.open("https://ethon.ai/industrial-anomaly-detection-using-only-defect-free-images-to-train-your-model/", "_blank");
           
         },
-      },{id: "books-the-godfather",
-          title: 'The Godfather',
-          description: "",
-          section: "Books",handler: () => {
-              window.location.href = "/books/the_godfather/";
-            },},{
+      },{
         id: 'social-github',
         title: 'GitHub',
         section: 'Socials',
