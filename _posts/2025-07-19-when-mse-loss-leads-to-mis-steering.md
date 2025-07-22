@@ -52,7 +52,7 @@ In the figure below, a highway lane splits into two: the driver can either turn 
 
 <div class="row mt-3 justify-content-center">
     <div class="col-md-6 col-sm-8 mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img//posts/steering_angle_illustration.pdf" class="img-fluid rounded z-depth-1" %}
+        {% include figure.liquid loading="eager" path="assets/img//posts/steering_angle_illustration.png" class="img-fluid rounded z-depth-1" %}
     </div>
 </div>
 <div class="caption">

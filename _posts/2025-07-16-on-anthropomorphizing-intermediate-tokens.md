@@ -58,7 +58,7 @@ In my view, Kambhampati et al. highlight two **key fallacies** (cf. Sec. 3 in th
 1. **The drive to make reasoning traces interpretable**<d-footnote>The paper gives the example of DeepSeek’s transition from R1-Zero to R1 <d-cite key="guo2025deepseek"></d-cite>, where the push for improved language consistency actually harmed final model performance.</d-footnote>.
 2. **The implicit assumption that these reasoning traces are causally connected to the model’s final output**.
 
-Both fallacies stem from a persistent desire to "look inside" a model’s internal cognition, i.e., to treat its outputs as windows into an internal thought process. In this context, I find the analogy proposed by Hagendorff et al. in the paper "Machine Psychology"<d-cite key="hagendorff2023machine"></d-cite> especially powerful.
+Both fallacies stem from a persistent desire to "look inside" a model’s internal cognition, i.e., to treat its outputs as windows into an internal thought process. In this context, I find the analogy proposed by Hagendorff et al. in the paper _"Machine Psychology"_<d-cite key="hagendorff2023machine"></d-cite> especially powerful.
 
 Most people easily recognize the abstract analogy that connects biological and artificial neural networks. But Hagendorff et al. argue that this analogy also applies to how these systems are studied.
 
@@ -94,7 +94,7 @@ This confusion over CoTs risks derailing conversations about alignment and inter
 
 ## A Call for Scientific Rigour and Integrity
 
-This paper can also be seen as a reminder that **scientific rigour and intellectual integrity are essential for genuine progress.**. This doesn’t imply that researchers are consciously deceiving anyone — but rather that it’s easy to mislead ourselves when dealing with vague concepts and opaque systems. I admit the fallacies highlighted in the paper were not obvious to me before I read it. Yet without critical reflection, we risk unintentionally heading in the wrong direction.
+This paper can also be seen as a reminder that **scientific rigour and intellectual integrity are essential for genuine progress**. This doesn’t imply that researchers are consciously deceiving anyone — but rather that it’s easy to mislead ourselves when dealing with vague concepts and opaque systems. I admit the fallacies highlighted in the paper were not obvious to me before I read it. Yet without critical reflection, we risk unintentionally heading in the wrong direction.
 
 This tendency is not new in the field of AI. As Kambhampati et al. note, McDermott (1976)<d-cite key="mcdermott1976artificial"></d-cite> argued nearly fifty years ago that AI researchers often delude themselves and others by using on misleading language, poorly defined abstractions, and wishful thinking instead of rigorous analysis and empirical clarity.<d-footnote>It is amusing to note that McDermott’s paper ends with the line: "I have criticized AI researchers very harshly. &#91;...&#93; However, to say anything good about anyone is beyond the scope of this paper."</d-footnote>
 
@@ -112,3 +112,5 @@ Second, drawing on Marvin Minsky’s observation that "intelligence is shifting 
 Looking ahead, there are many promising directions for future work. Personally, I find approaches like Chain of Continuous Thought <d-cite key="hao2024training"></d-cite> particularly compelling. This line of research avoids the deceptive desire for anthropomorphic "insights" and instead focuses on equipping LLMs with mechanisms to transfer dense, structured information via tokens — something that seems difficult, if not impossible, to achieve with plain language tokens sampled from the vocabulary.<d-footnote>It is, however, interesting to note that this referenced approach currently seems to heavily rely on a curriculum to move from human-generated CoTs to continuous CoTs.</d-footnote>
 
 Ultimately, the value of CoTs may lie less in what they reveal about "how models think", and more in how they can be leveraged as tools to shape and constrain behavior — while keeping our expectations grounded in scientific rigor rather than anthropomorphic metaphors.
+
+\*_This post has also been published on [Medium](https://medium.com/@chrhenning91/on-anthropomorphizing-token-traces-3e60026c41c4)._
