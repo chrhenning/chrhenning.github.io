@@ -37,7 +37,7 @@ It's the opposite of building in [stealth mode](https://en.wikipedia.org/wiki/St
 
 ### Validated learning
 
-> _"If I had asked people what they wanted, they would have said faster horses."_  – a quote often (though likely wrongly) attributed to Henry Ford.
+> _"If I had asked people what they wanted, they would have said faster horses."_ – a quote often (though likely wrongly) attributed to Henry Ford.
 
 This quote, whether true or not, highlights a key challenge: **customers may not articulate the solution you should build, but they will reveal the problems worth solving**. Validated learning is about aligning your vision with those underlying needs — not blindly asking what features to ship.
 
