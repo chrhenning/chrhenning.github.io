@@ -37,7 +37,18 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/cv/";
           },
-        },{id: "post-why-an-mse-loss-might-make-your-self-driving-car-crash",
+        },{id: "post-smart-debt-management-the-key-to-fast-mvp-iteration",
+        
+          title: "Smart Debt Management - The Key to Fast MVP Iteration",
+        
+        description: "MVPs validate ideas fast, but unmanaged debt — technical, strategic, or feature — can stall iteration. Success lies in balancing speed with conscious debt management.",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2025/mvp-manage-debt-and-iterate-fast/";
+          
+        },
+      },{id: "post-why-an-mse-loss-might-make-your-self-driving-car-crash",
         
           title: "Why an MSE Loss Might Make Your Self-Driving Car Crash",
         
