@@ -3,7 +3,7 @@ layout: post
 title: Why an MSE Loss Might Make Your Self-Driving Car Crash
 date: 2025-07-19 09:56:00
 description: This article explains why using MSE to train steering angle prediction can be a recipe for disaster.
-tags: ml
+tags: ml, statistics
 categories: machine-learning
 giscus_comments: true
 related_posts: true

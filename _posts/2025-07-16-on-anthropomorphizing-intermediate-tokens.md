@@ -10,6 +10,7 @@ related_posts: false
 related_publications: false
 citation: false
 bibliography: 2025-07-16-anthropomorphizing.bib
+featured: true
 
 authors:
   - name: Christian Henning
