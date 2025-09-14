@@ -37,7 +37,18 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/cv/";
           },
-        },{id: "post-smart-debt-management-the-key-to-fast-mvp-iteration",
+        },{id: "post-technology-readiness-debt-building-before-the-future-arrives",
+        
+          title: "Technology Readiness Debt – Building Before the Future Arrives",
+        
+        description: "Technology Readiness Debt (TRD) is the gap between today&#39;s imperfect technology and tomorrow&#39;s vision — a strategic debt you carry to learn early, but one that only R&amp;D can repay on your terms.",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2025/technology-readiness-debt/";
+          
+        },
+      },{id: "post-smart-debt-management-the-key-to-fast-mvp-iteration",
         
           title: "Smart Debt Management - The Key to Fast MVP Iteration",
         
