@@ -29,7 +29,7 @@ TRD is the reality of building ambitious products before the technology is fully
 
 ## What Is Technology Readiness Debt?
 
-**Technology Readiness Debt (TRD)** arises when you build a product knowing that the underlying technology is not yet fully mature. You accept that your first solution will be imperfect — brittle, limited, or inefficient — but you move forward anyway to gain real-world experience, validate customer needs, and be ready when the technology catches up.
+**Technology Readiness Debt (TRD)** arises when you build a product knowing that the underlying technology is not yet fully mature. You accept that your first solution will be imperfect — brittle, limited, or inefficient — but you move forward anyway to gain real-world experience, validate customer needs, and be ready when the technology catches up.<d-footnote>TRD is not to be confused with <a href="https://en.wikipedia.org/wiki/Technology_readiness_level">Technology Readiness Levels</a> (TRLs), a framework originally developed by NASA to measure how mature a technology is, ranging from basic principles (TRL 1) to fully operational systems (TRL 9). TRL measures the maturity of a technology; TRD describes the strategic choice to build before the necessary TRL has been reached.</d-footnote>
 
 This makes TRD fundamentally different from [technical debt](https://en.wikipedia.org/wiki/Technical_debt). TRD comes from constraints: the "right" solution doesn't exist yet. You can either wait until it does, or build with what you have. Taking on TRD means choosing to start learning early, knowing you'll need to rebuild later.
 
