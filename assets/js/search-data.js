@@ -37,7 +37,18 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/cv/";
           },
-        },{id: "post-technology-readiness-debt-building-before-the-future-arrives",
+        },{id: "post-when-bayesian-uncertainty-becomes-memory-a-path-to-continual-learning",
+        
+          title: "When Bayesian Uncertainty Becomes Memory - A Path to Continual Learning",
+        
+        description: "By inverting uncertainty into density, a model can recreate its own past and learn continuously without explicit replay buffers.",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2025/uncertainty-can-solve-continual-learning/";
+          
+        },
+      },{id: "post-technology-readiness-debt-building-before-the-future-arrives",
         
           title: "Technology Readiness Debt – Building Before the Future Arrives",
         
