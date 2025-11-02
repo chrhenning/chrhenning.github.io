@@ -37,7 +37,18 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/cv/";
           },
-        },{id: "post-when-bayesian-uncertainty-becomes-memory-a-path-to-continual-learning",
+        },{id: "post-scrappiness-incentivizes-sloppiness-why-lean-thinking-and-debt-management-build-better-products",
+        
+          title: "Scrappiness Incentivizes Sloppiness - Why Lean Thinking and Debt Management Build Better Products...",
+        
+        description: "Scrappiness is often mistaken for agility, but in practice it breeds unmanaged debt; a lean, debt-aware mindset achieves speed without sacrificing integrity.",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2025/scrappiness-incentivizes-sloppiness/";
+          
+        },
+      },{id: "post-when-bayesian-uncertainty-becomes-memory-a-path-to-continual-learning",
         
           title: "When Bayesian Uncertainty Becomes Memory - A Path to Continual Learning",
         
