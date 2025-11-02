@@ -30,11 +30,29 @@
   "work": [
     {
       "name": "EthonAI",
+      "position": "Lead Research Scientist",
+      "url": "https://ethon.ai",
+      "location": "Zurich, Switzerland",
+      "startDate": "2025-11-01",
+      "summary": "Lead research in visual industrial AI, focusing on deep learning for computer vision and product integration.",
+      "highlights": [
+        "Guide research direction and team execution",
+        "Translate prototypes into production solutions",
+        "Mentor scientists and engineers"
+      ]
+    },
+    {
+      "name": "EthonAI",
       "position": "Senior Research Scientist",
       "url": "https://ethon.ai",
       "location": "Zurich, Switzerland",
       "startDate": "2025-01-01",
-      "summary": "Spearheading EthonAI’s internal research and development initiatives to advance applied AI in industrial settings."
+      "summary": "Established EthonAI's R&D function, defining its mission and processes for innovation in visual industrial AI. Enabled collaboration between research and engineering.",
+      "highlights": [
+        "Designed R&D processes for scientific exploration",
+        "Built infrastructure for rapid experimentation",
+        "Aligned research with product strategy"
+      ]
     },
     {
       "name": "EthonAI",
