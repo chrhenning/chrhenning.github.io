@@ -37,7 +37,18 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/cv/";
           },
-        },{id: "post-scrappiness-incentivizes-sloppiness-why-lean-thinking-and-debt-management-build-better-products",
+        },{id: "post-continual-learning-the-missing-piece-of-agi",
+        
+          title: "Continual Learning - The Missing Piece of AGI",
+        
+        description: "A new definition of AGI highlights what&#39;s still missing — the ability to learn continually — and why its absence makes predicting AGI&#39;s arrival impossible.",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2025/agi-misses-continual-learning/";
+          
+        },
+      },{id: "post-scrappiness-incentivizes-sloppiness-why-lean-thinking-and-debt-management-build-better-products",
         
           title: "Scrappiness Incentivizes Sloppiness - Why Lean Thinking and Debt Management Build Better Products...",
         
