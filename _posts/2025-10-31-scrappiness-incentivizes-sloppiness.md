@@ -15,6 +15,13 @@ authors:
   - name: Christian Henning
     affiliations:
       name: Personal Blog
+
+toc:
+  - name: Scrappiness and Technical Debt
+  - name: The Empirical Case for Quality
+  - name: Throwaway Code - The True Exception
+  - name: Lean Thinking - The Sustainable Alternative
+  - name: Conclusion — Speed Without Sacrifice
 ---
 
 I often hear “scrappiness” praised as a virtue in modern software engineering — a call to move fast, improvise, and avoid perfectionism. There's truth in that; perfectionism can paralyze progress.
@@ -25,7 +32,7 @@ The irony is that what we celebrate as "speed" is often just **short-term accele
 
 In this blog, I argue that scrappiness is a poor metaphor for effective engineering. A **lean, debt-aware** mindset achieves speed without sacrificing integrity, and ultimately, builds better products.
 
-### Scrappiness and Technical Debt
+## Scrappiness and Technical Debt
 
 When code is meant to last — to be extended, maintained, or shared — scrappiness becomes a **redundant concept**. Every shortcut taken in such a context already falls under a well-defined term: **technical debt**. The difference is that debt carries a built-in moral — it must be paid back. Scrappiness, in contrast, is often celebrated as if no repayment were needed.
 
@@ -35,7 +42,7 @@ Scrappiness, as it's typically invoked in teams, drops that awareness. It's debt
 
 This drive for initial speed sometimes aligns with the philosophy of ["Worse is Better"](https://en.wikipedia.org/wiki/Worse_is_better), a term often misunderstood. Its original intent is not to produce "bad" quality, but to favor simplicity and implementation speed over premature complexity and completeness, allowing for rapid adoption and essential feedback.<d-footnote>In the end, <a href="https://www.geeksforgeeks.org/software-engineering/premature-optimization/">premature optimization is known as the root of all evil</a>.</d-footnote> This approach is a form of strategic, conscious technical debt. However, if teams use this rationale to justify low-quality solutions that are not truly disposable or built upon simple, correct core behavior, they are simply trading temporary motion for lasting momentum.
 
-### The Empirical Case for Quality
+## The Empirical Case for Quality
 
 If "scrappiness" were truly the path to speed, messy codebases would outperform clean ones — but empirical data proves the opposite. Code quality is one of the strongest predictors of long-term development velocity.
 
@@ -43,7 +50,7 @@ Quantitative analysis consistently debunks the myth of a speed-versus-quality tr
 
 Large organizations have learned this lesson the hard way. Meta's engineering culture, once defined by "move fast and break things", eventually shifted toward a more disciplined focus on stability and sustainable velocity <d-cite key="stokelwalker2024movefast"></d-cite>. As early as 2014, Facebook officially replaced its old motto with "move fast with stable infrastructure" <d-cite key="murphy2025stableinfra"></d-cite>. The company recognized that speed built on instability doesn't scale. Further, Mockus et al. (2025) detail how systematic code quality improvements became essential to maintaining productivity across their tens of thousands of engineers <d-cite key="mockus2025code"></d-cite>. Code quality is not an aesthetic concern — it's the primary engine of long-term performance and velocity.
 
-### Throwaway Code: The True Exception
+## Throwaway Code: The True Exception
 
 There is one domain where scrappiness can make sense: true throwaway prototypes.
 
@@ -55,7 +62,7 @@ Even for genuine prototypes, scrappiness shouldn't mean sloppiness. A prototype 
 
 The distinction is crucial: the right mindset is not "move fast and hack things", but rather "build just enough to learn — and know when to throw it away".
 
-### Lean Thinking: The Sustainable Alternative
+## Lean Thinking: The Sustainable Alternative
 
 If scrappiness is the illusion of speed, [lean thinking](https://en.wikipedia.org/wiki/Lean_thinking) is its sustainable form.
 
@@ -63,7 +70,7 @@ Lean development doesn't reject shortcuts — it manages them. It emphasizes cle
 
 This mindset aligns with what both empirical research and industry practice have converged on: quality is a driver of long-term speed, not a drag on it. Maintaining clean, modular codebases leads to shorter lead times resulting in competitive advantages <d-cite key="tornhill2023codequality"></d-cite>. Lean development is about moving deliberately: fast where you can, careful where you must. It values maintainability over complexity, speed with accountability, and debt with discipline.
 
-### Conclusion — Speed Without Sacrifice
+## Conclusion — Speed Without Sacrifice
 
 Scrappiness too often becomes a blanket excuse for poor quality and unmanaged shortcuts. Once "scrappy" work enters production, the hidden costs begin to surface: slower iteration, more bugs, and eroding trust in the system.
 

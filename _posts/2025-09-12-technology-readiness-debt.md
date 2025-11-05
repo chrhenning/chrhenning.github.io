@@ -18,6 +18,7 @@ authors:
 toc:
   - name: What Is Technology Readiness Debt?
   - name: The Payoff of Carrying TRD
+  - name: When TRD Comes Due
   - name: Building Before the Future Arrives
 ---
 
