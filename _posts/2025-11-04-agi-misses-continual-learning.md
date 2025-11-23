@@ -25,6 +25,15 @@ toc:
 
 [Artificial General Intelligence](https://en.wikipedia.org/wiki/Artificial_general_intelligence) (AGI) is often described as an AI system that performs on par with the average human across the full spectrum of cognitive abilities. A recent paper by Hendrycks et al. takes an important step toward grounding this concept in a century of empirical research within human cognitive science <d-cite key="hendrycks2025definition"></d-cite>. The authors map existing AI capabilities onto the well-established hierarchy of human cognitive skills — revealing real progress, but also striking asymmetries. Most notably, when it comes to long-term memory storage, we are effectively at **zero progress**, with no measurable trajectory forward. This gap puts continual learning back in the spotlight — a discipline too often forgotten, yet essential for any meaningful notion of general intelligence.
 
+<div class="row mt-3 justify-content-center">
+    <div class="col-md-6 col-sm-8 mt-3 mt-md-0">
+        {% include figure.liquid loading="eager" path="assets/img/posts/definition_of_agi.png" class="img-fluid rounded z-depth-1" %}
+    </div>
+</div>
+<div class="caption">
+    Figure 1 from "A Definition of AGI" by Dan Hendrycks et al., licensed under CC BY 4.0. Source: <a url="https://arxiv.org/abs/2510.18212">arXiv:2510.18212</a>.
+</div>
+
 ## A Definition of AGI
 
 The paper builds on the [Cattell–Horn–Carroll](https://en.wikipedia.org/wiki/Cattell–Horn–Carroll_theory) (CHC) model — a taxonomy of human cognitive abilities distilled from a century of factor analyses across IQ tests <d-cite key="schneider2018cattell"></d-cite>. Nearly every major intelligence test since the late 1990s has been explicitly or implicitly based on CHC, making it the most empirically grounded framework we have for describing human cognition. CHC is best seen as a **map of the cognitive ecosystem**: it captures how test scores co-vary, not why cognitive abilities arise or interact.
