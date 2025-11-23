@@ -31,7 +31,7 @@ toc:
     </div>
 </div>
 <div class="caption">
-    Figure 1 from "A Definition of AGI" by Dan Hendrycks et al., licensed under CC BY 4.0. Source: <a url="https://arxiv.org/abs/2510.18212">arXiv:2510.18212</a>.
+    Figure from "A Definition of AGI" by Dan Hendrycks et al., licensed under CC BY 4.0. Source: <a url="https://arxiv.org/abs/2510.18212">arXiv:2510.18212</a>.
 </div>
 
 ## A Definition of AGI
