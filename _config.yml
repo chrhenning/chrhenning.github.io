@@ -124,6 +124,10 @@ external_sources:
     posts:
       - url: https://ethon.ai/industrial-anomaly-detection-using-only-defect-free-images-to-train-your-model/
         published_date: 2024-02-01
+  - name: Why your next visual quality inspection system will be training-free
+    posts:
+      - url: https://ethon.ai/why-your-next-visual-quality-inspection-system-will-be-training-free/
+        published_date: 2025-12-16
 
 # -----------------------------------------------------------------------------
 # Newsletter
