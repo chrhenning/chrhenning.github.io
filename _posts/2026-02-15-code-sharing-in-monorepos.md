@@ -40,6 +40,7 @@ The easy solution is to copy shared modules into images or maintain shared requi
 The core constraint is simple: **Shared code must declare its own dependencies, and containers must install only what they explicitly depend on**.
 
 In practice, this means turning internal modules into proper installable [Python packages](https://packaging.python.org/en/latest/guides/writing-pyproject-toml/), each with its own `pyproject.toml`. A package defines:
+
 - Its runtime dependencies
 - Its internal workspace dependencies
 - The importable modules that constitute its public API
@@ -55,12 +56,14 @@ The unit of reuse becomes the package, not the directory.
 Explicit package boundaries are necessary, but not sufficient. Without coordination, each package could pin its own versions, reintroducing divergence at the dependency layer. That is where a Single Version Policy (SVP) enters <d-cite key="google-code-sharing"></d-cite><d-cite key="google-one-version-rule"></d-cite>.
 
 Under SVP:
+
 - All external dependency versions are resolved globally.
 - A shared lockfile pins the full transitive graph.
 - Internal packages declare what they need, not which version.
 - The entire monorepo shares one coherent dependency graph.
 
 This has concrete consequences:
+
 - No [diamond dependency](https://en.wikipedia.org/wiki/Dependency_hell#Diamond_dependency) conflicts between services.
 - Security updates are applied once, centrally.
 - CI tests a single resolved graph rather than a combinatorial version matrix.
@@ -70,6 +73,7 @@ Each container becomes a projection of the same resolved dependency graph, restr
 ## What Changes in Practice
 
 This change affects how the system is structured, but the benefits are practical:
+
 - Internal modules become installable packages.
 - A shared lockfile governs all external versions.<d-footnote>One practical implementation is using `uv`, whose <a href="https://docs.astral.sh/uv/concepts/projects/workspaces/">workspace model</a> allows multiple internal packages to share a single resolved dependency graph and lockfile.</d-footnote>
 - Containers install only the packages they require.
