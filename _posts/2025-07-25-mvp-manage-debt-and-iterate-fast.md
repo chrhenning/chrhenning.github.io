@@ -6,7 +6,7 @@ description: MVPs validate ideas fast, but unmanaged debt — technical, strateg
 tags: mvp
 categories: product-management
 giscus_comments: true
-related_posts: false
+related_posts: true
 related_publications: false
 citation: false
 bibliography: 2025-07-25-mvp-iterate-debt.bib

@@ -6,7 +6,7 @@ description: My thoughts on the paper 'Stop Anthropomorphizing Intermediate Toke
 tags: ml
 categories: machine-learning
 giscus_comments: true
-related_posts: false
+related_posts: true
 related_publications: false
 citation: false
 bibliography: 2025-07-16-anthropomorphizing.bib

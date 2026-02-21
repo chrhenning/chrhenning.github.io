@@ -1,0 +1,63 @@
+metadata:
+  last_updated: '2026-02-17'
+papers:
+  u6QSFrsAAAAJ:2osOgNQ5qMEC:
+    citations: 562
+    title: Continual learning with hypernetworks
+    year: '2020'
+  u6QSFrsAAAAJ:LkGwnXOMwfcC:
+    citations: 20
+    title: Population-level coding of avoidance learning in medial prefrontal cortex
+    year: '2024'
+  u6QSFrsAAAAJ:Tyk-4Ss8FVUC:
+    citations: 93
+    title: Posterior Meta-Replay for Continual Learning
+    year: '2021'
+  u6QSFrsAAAAJ:UeHWp8X0CEIC:
+    citations: 49
+    title: Neural networks with late-phase weights
+    year: '2021'
+  u6QSFrsAAAAJ:W7OEmFMy1HYC:
+    citations: 22
+    title: On out-of-distribution detection with Bayesian neural networks
+    year: '2021'
+  u6QSFrsAAAAJ:Y0pCki6q_DkC:
+    citations: 20
+    title: Are Bayesian neural networks intrinsically good at out-of-distribution detection?
+    year: '2021'
+  u6QSFrsAAAAJ:YsMSGLbcyi4C:
+    citations: 7
+    title: Uncertainty estimation under model misspecification in neural network regression
+    year: '2021'
+  u6QSFrsAAAAJ:_FxGoFyzp5QC:
+    citations: 17
+    title: Continual learning in recurrent neural networks with hypernetworks
+    year: '2020'
+  u6QSFrsAAAAJ:d1gkVwhDpl0C:
+    citations: 49
+    title: Estimating the information gap between textual and visual representations
+    year: '2018'
+  u6QSFrsAAAAJ:eQOLeE2rZwMC:
+    citations: 0
+    title: Knowledge uncertainty and lifelong learning in neural systems
+    year: '2022'
+  u6QSFrsAAAAJ:qjMakFHDy7sC:
+    citations: 61
+    title: Continual Learning in Recurrent Neural Networks
+    year: '2021'
+  u6QSFrsAAAAJ:roLk4NBRz8UC:
+    citations: 0
+    title: QBF-Solver
+    year: '2014'
+  u6QSFrsAAAAJ:u-x6o8ySG0sC:
+    citations: 26
+    title: Approximating the Predictive Distribution via Adversarially-Trained Hypernetworks
+    year: '2018'
+  u6QSFrsAAAAJ:u5HHmVD_uO8C:
+    citations: 0
+    title: Estimating the Information Gap between Textual and Graphical Representations
+    year: '2017'
+  u6QSFrsAAAAJ:ufrVoPGSRksC:
+    citations: 0
+    title: Population-level neural correlates of flexible avoidance learning in medial prefrontal cortex
+    year: '2023'

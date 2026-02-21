@@ -2074,7 +2074,7 @@ d-appendix > distill-appendix {
   <div class="byline grid">
     <div class="authors-affiliations grid">
       <h3>Authors</h3>
-      <h3></h3>
+      <h3>Affiliations</h3>
       ${frontMatter.authors
         .map(
           (author) => `
@@ -2088,6 +2088,13 @@ d-appendix > distill-appendix {
           }
         </p>
         <p class="affiliation">
+        ${author.affiliations
+          .map((affiliation) =>
+            affiliation.url
+              ? `<a class="affiliation" href="${affiliation.url}">${affiliation.name}</a>`
+              : `<span class="affiliation">${affiliation.name}</span>`
+          )
+          .join(", ")}
         </p>
       `
         )
