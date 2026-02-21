@@ -27,6 +27,15 @@ In a Python monorepo that produces multiple independently deployed containers, s
 
 This post argues that scalable code sharing in a monorepo requires two deliberate constraints: internal modules as **installable packages**, and a **Single Version Policy (SVP)** enforced by a shared lockfile.
 
+<div class="row mt-3 justify-content-center">
+    <div class="col-md-10 col-sm-12 mt-3 mt-md-0">
+        {% include figure.liquid loading="eager" path="assets/img/posts/python_monorepo_lockfile.png" class="img-fluid rounded z-depth-1" %}
+    </div>
+</div>
+<div class="caption">
+    <b>Scaling code reuse through explicit boundaries and global constraints.</b> Internal modules are structured as <b>installable packages</b> to define clear dependency boundaries. A <b>Single Version Policy (SVP)</b> then resolves these requirements into a single, shared lockfile. This allows each container to install only the specific code it needs while guaranteeing that all services across the monorepo share a consistent and audited dependency graph.
+</div>
+
 ## The Problem: Sharing Code Across Many Containers
 
 In a growing monorepo, the number of containers tends to outpace the number of developers. APIs, workers, training jobs, scheduled tasks, internal tools — all built from the same repository, all sharing some portion of the same code.
@@ -75,7 +84,7 @@ Each container becomes a projection of the same resolved dependency graph, restr
 This change affects how the system is structured, but the benefits are practical:
 
 - Internal modules become installable packages.
-- A shared lockfile governs all external versions.<d-footnote>One practical implementation is using `uv`, whose <a href="https://docs.astral.sh/uv/concepts/projects/workspaces/">workspace model</a> allows multiple internal packages to share a single resolved dependency graph and lockfile.</d-footnote>
+- A shared lockfile governs all external versions.<d-footnote>One practical implementation is using <code>uv</code>, whose <a href="https://docs.astral.sh/uv/concepts/projects/workspaces/">workspace model</a> allows multiple internal packages to share a single resolved dependency graph and lockfile.</d-footnote>
 - Containers install only the packages they require.
 - CI validates packages independently against the locked graph.
 
