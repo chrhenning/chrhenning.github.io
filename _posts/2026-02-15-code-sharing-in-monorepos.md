@@ -6,7 +6,7 @@ description: How structuring internal modules as installable packages in a monor
 tags: swe
 categories: engineering
 giscus_comments: true
-related_posts: false
+related_posts: true
 related_publications: false
 citation: false
 bibliography: 2026-02-15-code-sharing-in-monorepos.bib

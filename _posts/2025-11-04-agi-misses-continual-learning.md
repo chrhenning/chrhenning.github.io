@@ -6,7 +6,7 @@ description: A new definition of AGI highlights what's still missing — the abi
 tags: ml
 categories: machine-learning
 giscus_comments: true
-related_posts: false
+related_posts: true
 related_publications: false
 citation: false
 bibliography: 2025-11-04-agi-misses-continual-learning.bib

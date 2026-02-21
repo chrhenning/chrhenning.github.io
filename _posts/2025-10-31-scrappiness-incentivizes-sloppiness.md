@@ -6,7 +6,7 @@ description: Scrappiness is often mistaken for agility, but in practice it breed
 tags: mvp
 categories: product-management
 giscus_comments: true
-related_posts: false
+related_posts: true
 related_publications: false
 citation: false
 bibliography: 2025-10-31-scrappiness-incentivizes-sloppiness.bib

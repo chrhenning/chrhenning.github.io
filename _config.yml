@@ -190,6 +190,7 @@ exclude:
   - _pages/profiles.md
   - _pages/projects.md
   - _pages/teaching.md
+  - _pages/repositories.md # Broken, see: https://github.com/alshedivat/al-folio/issues/3388#issuecomment-3708678455
   - _projects/?_project.md
   - assets/jupyter/blog.ipynb
   - bin/
