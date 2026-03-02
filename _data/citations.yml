@@ -1,8 +1,8 @@
 metadata:
-  last_updated: '2026-02-17'
+  last_updated: '2026-03-02'
 papers:
   u6QSFrsAAAAJ:2osOgNQ5qMEC:
-    citations: 562
+    citations: 572
     title: Continual learning with hypernetworks
     year: '2020'
   u6QSFrsAAAAJ:LkGwnXOMwfcC:
@@ -22,11 +22,11 @@ papers:
     title: On out-of-distribution detection with Bayesian neural networks
     year: '2021'
   u6QSFrsAAAAJ:Y0pCki6q_DkC:
-    citations: 20
+    citations: 21
     title: Are Bayesian neural networks intrinsically good at out-of-distribution detection?
     year: '2021'
   u6QSFrsAAAAJ:YsMSGLbcyi4C:
-    citations: 7
+    citations: 8
     title: Uncertainty estimation under model misspecification in neural network regression
     year: '2021'
   u6QSFrsAAAAJ:_FxGoFyzp5QC:
