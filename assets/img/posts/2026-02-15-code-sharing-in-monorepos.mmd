@@ -1,0 +1,42 @@
+flowchart TB
+    direction TB
+
+    subgraph Monorepo ["📦 Python Monorepo"]
+        direction TB
+
+        Lock{{"<b>Shared Lockfile</b><br/>(G: Resolved Graph)"}}
+
+        subgraph InternalPackages ["Internal Packages"]
+            direction LR
+            P1["<b>ml-core</b><br/>(pyproject.toml)"]
+            P2["<b>ml-training</b><br/>(pyproject.toml)"]
+            P3["<b>api-service</b><br/>(pyproject.toml)"]
+        end
+    end
+
+    %% Containers
+    C1["🐳 <b>Container A</b><br/>(API Image)"]
+    C2["🐳 <b>Container B</b><br/>(Training Image)"]
+
+    %% Internal Dependency Logic
+    P3 --> P1
+    P2 --> P1
+
+    %% Installation Logic
+    C1 -- "installs" --> P3
+    C2 -- "installs" --> P2
+
+    %% Constraint Logic
+    C1 -. "constrained by G" .-> Lock
+    C2 -. "constrained by G" .-> Lock
+
+    %% Styling
+    classDef package fill:#f8fafc,stroke:#64748b,stroke-width:2px,color:#334155;
+    classDef lock fill:#f0f9ff,stroke:#0ea5e9,stroke-width:3px,color:#0369a1,font-weight:bold;
+    classDef container fill:#ffffff,stroke:#334155,stroke-width:2px,color:#1e293b;
+    classDef repo fill:#f1f5f9,stroke:#cbd5e1,stroke-width:2px,stroke-dasharray: 5 5,color:#475569;
+
+    class P1,P2,P3 package;
+    class Lock lock;
+    class C1,C2 container;
+    class Monorepo repo;

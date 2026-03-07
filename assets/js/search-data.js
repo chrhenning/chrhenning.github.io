@@ -30,22 +30,22 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/cv/";
           },
-        },{id: "post-code-sharing-at-scale-in-python-monorepos-with-a-single-version-policy",
+        },{id: "post-why-uncertainty-in-machine-learning-is-conceptually-broken",
+        
+          title: "Why Uncertainty in Machine Learning Is Conceptually Broken",
+        
+        description: "A critique of why modern ML uncertainty estimates lack clear semantics, reliable evaluation, and meaningful use cases.",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2026/uncertainty-decomposition/";
+          
+        },
+      },{id: "post-code-sharing-at-scale-in-python-monorepos-with-a-single-version-policy",
         
           title: "Code Sharing at Scale in Python Monorepos with a Single Version Policy",
         
         description: "How structuring internal modules as installable packages in a monorepo enables controlled code reuse across many containers — while keeping images lean and dependency management centralized.",
-        section: "Posts",
-        handler: () => {
-          
-            window.location.href = "/blog/2026/code-sharing-in-monorepos/";
-          
-        },
-      },{id: "post-code-sharing-in-monorepos",
-        
-          title: "Code Sharing In Monorepos",
-        
-        description: "",
         section: "Posts",
         handler: () => {
           
