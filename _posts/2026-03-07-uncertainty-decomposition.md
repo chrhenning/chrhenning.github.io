@@ -153,6 +153,25 @@ In practice, however, we rarely operate in this limit. Models are almost always 
 
 The decomposition therefore separates **disagreement between models** from **uncertainty within individual models**, but this should not be mistaken for a clean decomposition of predictive uncertainty into epistemic and aleatoric components of the data-generating process.
 
+<div class="row mt-3 justify-content-center">
+    <div class="col-md-10 col-sm-12 mt-3 mt-md-0">
+        {% include figure.liquid loading="eager" path="assets/img/posts/posterior_heteroscedastic_gp.png" class="img-fluid rounded z-depth-1" %}
+    </div>
+</div>
+<div class="caption">
+  <p>
+    <b>Posterior hypotheses of a heteroscedastic regression model.</b> Each blue curve represents a hypothesis sampled from the posterior. A hypothesis specifies both a mean function and an input-dependent predictive distribution ($p(y\mid\theta,x)$); the shaded bands visualize the noise level assumed by that hypothesis. Importantly, this noise is a property of the model hypothesis rather than the true data-generating process. The true aleatoric uncertainty is given by the entropy of the unknown ground-truth distribution ($p^*(y\mid x)$).
+  </p>
+
+  <p>
+    Two regions contain observations: a densely sampled region (black points) and a sparsely sampled region (orange points). In the densely sampled region, the data strongly constrain the posterior, so epistemic uncertainty collapses and the remaining plausible hypotheses become very similar. Assuming the model class is correctly specified (cf. <d-cite key="cervera:henning:2021:regression"></d-cite>), these hypotheses approximate the true data-generating process, and the noise they assign reflects the true aleatoric uncertainty.
+  </p>
+
+  <p>
+    In contrast, the sparsely sampled region leaves many different hypotheses about the data-generating process plausible, leading to substantial epistemic uncertainty. Because the ground truth is not identifiable from the available data in this region, different hypotheses imply different noise levels. Consequently, the model cannot faithfully represent the true aleatoric uncertainty there. This illustrates a key conceptual point: <b>only in regions where epistemic uncertainty has collapsed can a model reliably recover properties of the true data-generating process, including its aleatoric uncertainty.</b>
+  </p>
+</div>
+
 ## Concluding Remarks
 
 The decomposition of predictive entropy into expected entropy and mutual information is a valid information-theoretic identity. However, interpreting this identity as a principled decomposition of predictive uncertainty into **aleatoric** and **epistemic** components is generally misleading. The quantities involved are defined purely in terms of the model's predictive distributions and therefore do not directly correspond to properties of the underlying data-generating process.
