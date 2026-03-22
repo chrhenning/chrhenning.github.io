@@ -15,6 +15,14 @@ authors:
   - name: Christian Henning
     affiliations:
       name: Personal Blog
+
+toc:
+  - name: Introduction
+  - name: Decomposing Predictive Uncertainty
+  - name: Why the Expected Entropy Is Not Aleatoric Uncertainty
+  - name: The Prior Determines What a Model Considers Surprising
+  - name: Misspecification Silently Corrupts Both Uncertainty Components
+  - name: Concluding Remarks
 ---
 
 Uncertainty estimation is often framed as the key to building reliable machine learning systems. Central to this narrative is the distinction between **aleatoric** and **epistemic** uncertainty. In this post, I argue that the commonly used **information-theoretic decomposition of predictive uncertainty does not generally correspond to these concepts** and often reflects modelling assumptions rather than properties of the data-generating process.
@@ -195,6 +203,15 @@ The figure above illustrates this concretely. In the training region, both model
 ## Misspecification Silently Corrupts Both Uncertainty Components
 
 Even setting aside the question of priors, the reliability of uncertainty estimates depends on a further assumption: that the chosen likelihood is capable of representing the true data-generating distribution. Under model misspecification this fails, and both uncertainty components are affected. Aleatoric uncertainty reflects the noise structure imposed by the likelihood rather than any property of the world. Epistemic uncertainty can become actively misleading: as data accumulates, the posterior concentrates around the least-wrong parameter setting, producing a model that grows increasingly confident in a subtly incorrect answer <d-cite key="cervera:henning:2021:regression"></d-cite>.
+
+<div class="row mt-3 justify-content-center">
+    <div class="col-md-10 col-sm-12 mt-3 mt-md-0">
+        {% include figure.liquid loading="eager" path="assets/img/posts/uncertainty-decomposition/1dexperiments.png" class="img-fluid rounded z-depth-1" %}
+    </div>
+</div>
+<div class="caption">
+  Adapted from Fig. 2 in <d-cite key="cervera:henning:2021:regression"></d-cite>. Effect of likelihood choice on uncertainty estimates for a **bimodal data-generating distribution**. A Gaussian likelihood (a, b) cannot represent the true multimodal structure and produces confidently "wrong" aleatoric uncertainty estimates, regardless of whether variance is fixed or learned. A more flexible, normalising flow-based likelihood (c) recovers the true distribution. Adding parameter uncertainty to a misspecified Gaussian model (d) introduces epistemic uncertainty but cannot compensate for the flawed likelihood.
+</div>
 
 The severity of this problem depends heavily on how flexible the likelihood is. Universal function approximators — such as deep neural networks with expressive output heads — can in principle learn a wide range of conditional distributions without strong prior commitments about their shape. This substantially reduces the risk that the likelihood is fundamentally incompatible with the data. The remaining danger lies in cases where hard structural assumptions are imposed: for instance, assuming that the predictive distribution is always Gaussian, or always unimodal. Such constraints can be invisible in well-studied settings but catastrophic on out-of-distribution inputs or in tasks with genuinely multimodal targets. The takeaway is not that misspecification is unavoidable, but that flexibility needs to be deliberately built into the likelihood — it is not guaranteed by simply using a large model.<d-footnote>Though there is <a href="https://en.wikipedia.org/wiki/No_free_lunch_theorem">no free lunch</a>, more flexibility might come at a cost.</d-footnote> See [my recent blog post](/blog/2025/when-mse-loss-leads-to-mis-steering/) for more details on this argument.
 
