@@ -30,7 +30,18 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/cv/";
           },
-        },{id: "post-why-uncertainty-in-machine-learning-is-conceptually-broken",
+        },{id: "post-the-bayesian-story-behind-prior-fitted-networks",
+        
+          title: "The Bayesian Story Behind Prior-Fitted Networks",
+        
+        description: "PFNs are often described as Bayesian predictors, but their training objective and inference mechanism suggest a more nuanced interpretation.",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2026/the-bayesian-story-of-pfns/";
+          
+        },
+      },{id: "post-why-uncertainty-in-machine-learning-is-conceptually-broken",
         
           title: "Why Uncertainty in Machine Learning Is Conceptually Broken",
         
