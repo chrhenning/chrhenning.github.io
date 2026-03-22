@@ -149,13 +149,13 @@ depends entirely on the predictive distributions produced by the model. It there
 
 In a very specific limit, the two can coincide. If the model is correctly specified and the amount of data grows without bound, the posterior ($p(\theta \mid d)$) collapses onto the true parameters. In this case the predictive model recovers the true data-generating distribution, and the expected entropy indeed corresponds to the aleatoric uncertainty.
 
-In practice, however, we rarely operate in this limit. Models are almost always **misspecified**, meaning that no parameter setting exactly represents the true data-generating process. In such cases, the uncertainty produced by the likelihood model reflects modelling choices rather than intrinsic noise in the data (see also my earlier discussion of this issue in the context of regression losses [my recent blog post](/blog/2025/when-mse-loss-leads-to-mis-steering/)). As a result, the expected entropy term cannot generally be interpreted as a measure of aleatoric uncertainty.
+In practice, however, we rarely operate in this limit. Models are almost always **misspecified** — no parameter setting exactly represents the true data-generating process — and so care must be taken when interpreting the expected entropy term a measure of aleatoric uncertainty (cf. <d-cite key="cervera:henning:2021:regression"></d-cite>). We return to the consequences of misspecification in more detail below.
 
 The decomposition therefore separates **disagreement between models** from **uncertainty within individual models**, but this should not be mistaken for a clean decomposition of predictive uncertainty into epistemic and aleatoric components of the data-generating process.
 
 <div class="row mt-3 justify-content-center">
     <div class="col-md-10 col-sm-12 mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/posts/posterior_heteroscedastic_gp.png" class="img-fluid rounded z-depth-1" %}
+        {% include figure.liquid loading="eager" path="assets/img/posts/uncertainty-decomposition/posterior_heteroscedastic_gp.png" class="img-fluid rounded z-depth-1" %}
     </div>
 </div>
 <div class="caption">
@@ -172,10 +172,36 @@ The decomposition therefore separates **disagreement between models** from **unc
   </p>
 </div>
 
+## The Prior Determines What a Model Considers Surprising
+
+**Bayesian models know what they don't know — but we humans don't know what they know.** In other words, we cannot easily tell whether the epistemic uncertainty of a Bayesian model is shaped by the data or by the chosen prior.
+
+When priors are hand-crafted by domain experts, this is at least transparent: one can inspect the prior, challenge it, and decide whether the resulting notion of "what the model doesn't know" is meaningful. In modern neural networks, this transparency is absent. The effective function-space prior is determined implicitly by architecture, weight initialisation, and optimiser dynamics — none of which were designed with any particular uncertainty semantics in mind. As a result, even a model performing exact Bayesian inference may produce epistemic uncertainty estimates whose meaning is opaque.
+
+<div class="row mt-3 justify-content-center">
+    <div class="col-md-4 col-sm-4 mt-3 mt-md-0">
+        {% include figure.liquid loading="eager" path="assets/img/posts/uncertainty-decomposition/gp_post_samples_rbf_1.png" class="img-fluid rounded z-depth-1" %}
+    </div>
+    <div class="col-md-4 col-sm-4 mt-3 mt-md-0">
+        {% include figure.liquid loading="eager" path="assets/img/posts/uncertainty-decomposition/gp_post_samples_ess_1_6.28.png" class="img-fluid rounded z-depth-1" %}
+    </div>
+</div>
+<div class="caption">
+  Adapted from Fig. 7 in <d-cite key="dangelo:henning:2021:uncertainty:based:ood"></d-cite>. Predictive posteriors of two Gaussian processes with markedly different function-space priors: RBF kernel (left) and ESS kernel (right). Training data are shown as black dots; shaded bands indicate the first three standard deviations of the predictive distribution.
+</div>
+
+The figure above illustrates this concretely. In the training region, both models fit the data closely and agree with each other. In the extrapolation region, their behaviour diverges entirely: the RBF kernel posterior reverts toward the prior with rapidly growing uncertainty, while the ESS kernel posterior continues to generalise confidently. Both models are doing everything right from a Bayesian perspective — the difference is entirely in what each prior encodes as plausible behaviour far from the data. Neither prior is "correct"; they simply reflect different inductive biases. For a neural network, we do not even have access to such a comparison: the implicit prior is not interpretable, so the epistemic uncertainty it induces is not interpretable either. Low epistemic uncertainty in any region may reflect genuine model confidence, or it may simply reflect a prior that happens to extrapolate smoothly — and from the model's output alone, there is no way to tell <d-cite key="dangelo:henning:2021:uncertainty:based:ood"></d-cite>.
+
+## Misspecification Silently Corrupts Both Uncertainty Components
+
+Even setting aside the question of priors, the reliability of uncertainty estimates depends on a further assumption: that the chosen likelihood is capable of representing the true data-generating distribution. Under model misspecification this fails, and both uncertainty components are affected. Aleatoric uncertainty reflects the noise structure imposed by the likelihood rather than any property of the world. Epistemic uncertainty can become actively misleading: as data accumulates, the posterior concentrates around the least-wrong parameter setting, producing a model that grows increasingly confident in a subtly incorrect answer <d-cite key="cervera:henning:2021:regression"></d-cite>.
+
+The severity of this problem depends heavily on how flexible the likelihood is. Universal function approximators — such as deep neural networks with expressive output heads — can in principle learn a wide range of conditional distributions without strong prior commitments about their shape. This substantially reduces the risk that the likelihood is fundamentally incompatible with the data. The remaining danger lies in cases where hard structural assumptions are imposed: for instance, assuming that the predictive distribution is always Gaussian, or always unimodal. Such constraints can be invisible in well-studied settings but catastrophic on out-of-distribution inputs or in tasks with genuinely multimodal targets. The takeaway is not that misspecification is unavoidable, but that flexibility needs to be deliberately built into the likelihood — it is not guaranteed by simply using a large model.<d-footnote>Though there is <a href="https://en.wikipedia.org/wiki/No_free_lunch_theorem">no free lunch</a>, more flexibility might come at a cost.</d-footnote> See [my recent blog post](/blog/2025/when-mse-loss-leads-to-mis-steering/) for more details on this argument.
+
 ## Concluding Remarks
 
 The decomposition of predictive entropy into expected entropy and mutual information is a valid information-theoretic identity. However, interpreting this identity as a principled decomposition of predictive uncertainty into **aleatoric** and **epistemic** components is generally misleading. The quantities involved are defined purely in terms of the model's predictive distributions and therefore do not directly correspond to properties of the underlying data-generating process.
 
-Conceptually, it is helpful to keep in mind that **aleatoric uncertainty is a property of the data**, while **epistemic uncertainty reflects limitations of our knowledge and modelling assumptions**. While certain limiting cases — such as correctly specified models with infinite data — can align these notions with the information-theoretic decomposition, such conditions rarely hold in practice.
+Conceptually, it is helpful to keep in mind that **aleatoric uncertainty is a property of the data**, while **epistemic uncertainty reflects limitations of our knowledge and modelling assumptions**. Even granting that separation, epistemic uncertainty is only meaningful relative to a prior — and for neural networks, the implicit prior is not interpretable by design. Furthermore, even a correctly specified model can have its uncertainty estimates silently corrupted by misspecification in the likelihood, causing the posterior to concentrate confidently around a wrong answer. While certain limiting cases — such as correctly specified models with infinite data — can align these notions with the information-theoretic decomposition, such conditions rarely hold in practice.
 
 I hope this short discussion helps create a bit of **conceptual clarity** around the interpretation of uncertainty decompositions in machine learning.
