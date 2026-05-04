@@ -1,16 +1,16 @@
 metadata:
-  last_updated: '2026-04-03'
+  last_updated: '2026-05-04'
 papers:
   u6QSFrsAAAAJ:2osOgNQ5qMEC:
-    citations: 586
+    citations: 590
     title: Continual learning with hypernetworks
     year: '2020'
   u6QSFrsAAAAJ:LkGwnXOMwfcC:
-    citations: 23
+    citations: 24
     title: Population-level coding of avoidance learning in medial prefrontal cortex
     year: '2024'
   u6QSFrsAAAAJ:Tyk-4Ss8FVUC:
-    citations: 94
+    citations: 97
     title: Posterior Meta-Replay for Continual Learning
     year: '2021'
   u6QSFrsAAAAJ:UeHWp8X0CEIC:
@@ -50,7 +50,7 @@ papers:
     title: QBF-Solver
     year: '2014'
   u6QSFrsAAAAJ:u-x6o8ySG0sC:
-    citations: 26
+    citations: 27
     title: Approximating the Predictive Distribution via Adversarially-Trained Hypernetworks
     year: '2018'
   u6QSFrsAAAAJ:u5HHmVD_uO8C:
