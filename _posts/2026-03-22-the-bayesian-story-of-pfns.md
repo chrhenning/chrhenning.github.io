@@ -3,7 +3,7 @@ layout: distill
 title: The Bayesian Story Behind Prior-Fitted Networks
 date: 2026-03-22 20:15:00
 description: PFNs are often described as Bayesian predictors, but their training objective and inference mechanism suggest a more nuanced interpretation.
-tags: ml
+tags: bayesian uncertainty
 categories: machine-learning
 giscus_comments: true
 related_posts: true

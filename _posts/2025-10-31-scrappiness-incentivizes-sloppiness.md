@@ -3,7 +3,7 @@ layout: distill
 title: Scrappiness Incentivizes Sloppiness - Why Lean Thinking and Debt Management Build Better Products
 date: 2025-10-31 19:15:00
 description: Scrappiness is often mistaken for agility, but in practice it breeds unmanaged debt; a lean, debt-aware mindset achieves speed without sacrificing integrity.
-tags: mvp
+tags: mvp technical-debt
 categories: product-management
 giscus_comments: true
 related_posts: true

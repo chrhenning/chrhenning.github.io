@@ -3,7 +3,7 @@ layout: post
 title: When Bayesian Uncertainty Becomes Memory - A Path to Continual Learning
 date: 2025-10-17 19:56:00
 description: By inverting uncertainty into density, a model can recreate its own past and learn continuously without explicit replay buffers.
-tags: ml, statistics
+tags: bayesian uncertainty continual-learning
 categories: machine-learning
 giscus_comments: true
 related_posts: true

@@ -3,7 +3,7 @@ layout: distill
 title: Why Uncertainty in Machine Learning Is Conceptually Broken
 date: 2026-03-07 11:15:00
 description: A critique of why modern ML uncertainty estimates lack clear semantics, reliable evaluation, and meaningful use cases.
-tags: ml
+tags: uncertainty bayesian
 categories: machine-learning
 giscus_comments: true
 related_posts: true

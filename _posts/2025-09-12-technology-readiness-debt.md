@@ -3,7 +3,7 @@ layout: distill
 title: Technology Readiness Debt – Building Before the Future Arrives
 date: 2025-09-12 08:15:00
 description: Technology Readiness Debt (TRD) is the gap between today's imperfect technology and tomorrow's vision — a strategic debt you carry to learn early, but one that only R&D can repay on your terms.
-tags: mvp
+tags: technical-debt
 categories: product-management
 giscus_comments: true
 related_posts: true

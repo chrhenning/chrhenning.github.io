@@ -3,7 +3,7 @@ layout: distill
 title: Continual Learning - The Missing Piece of AGI
 date: 2025-11-04 19:15:00
 description: A new definition of AGI highlights what's still missing — the ability to learn continually — and why its absence makes predicting AGI's arrival impossible.
-tags: ml
+tags: continual-learning agi
 categories: machine-learning
 giscus_comments: true
 related_posts: true

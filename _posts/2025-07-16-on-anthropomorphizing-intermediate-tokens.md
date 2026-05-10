@@ -3,7 +3,7 @@ layout: distill
 title: On Anthropomorphizing Token Traces
 date: 2025-07-16 21:12:00
 description: My thoughts on the paper 'Stop Anthropomorphizing Intermediate Tokens as Reasoning/Thinking Traces!'
-tags: ml
+tags: llm safety
 categories: machine-learning
 giscus_comments: true
 related_posts: true

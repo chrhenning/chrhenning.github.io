@@ -3,7 +3,7 @@ layout: distill
 title: Smart Debt Management - The Key to Fast MVP Iteration
 date: 2025-07-25 15:15:00
 description: MVPs validate ideas fast, but unmanaged debt — technical, strategic, or feature — can stall iteration. Success lies in balancing speed with conscious debt management.
-tags: mvp
+tags: mvp technical-debt
 categories: product-management
 giscus_comments: true
 related_posts: true
