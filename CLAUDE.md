@@ -9,43 +9,47 @@ Personal academic website for Christian Henning, hosted at https://chrhenning.co
 ## Development Commands
 
 **Recommended (Docker):**
+
 ```bash
 docker compose pull && docker compose up
 # Site available at http://localhost:8080
 ```
 
 **Without Docker (requires Ruby):**
+
 ```bash
 bundle install
 bundle exec jekyll serve
 ```
 
 **Update Google Scholar citations:**
+
 ```bash
 python bin/update_scholar_citations.py
 ```
 
 **Format code:**
+
 ```bash
 npx prettier --write .
 ```
 
 ## Architecture
 
-| Path | Role |
-|------|------|
-| `_config.yml` | Main Jekyll config — site metadata, plugins, feature flags |
-| `_pages/` | Top-level pages (about, CV, publications, projects, blog) |
-| `_posts/` | Blog posts (Markdown, front matter controls layout/tags) |
-| `_projects/` | Research/portfolio project pages |
-| `_bibliography/papers.bib` | BibTeX source for the publications page |
-| `_news/` | Short announcement entries shown on the about page |
-| `_layouts/` | Page-level Liquid templates |
-| `_includes/` | Reusable Liquid components |
-| `_sass/` | SCSS stylesheets |
-| `_plugins/` | Custom Ruby plugins (scholar citations, cache busting, BibTeX management) |
-| `_data/` | YAML data consumed by templates |
-| `assets/` | Images, compiled CSS/JS, PDFs, and other static files |
+| Path                       | Role                                                                      |
+| -------------------------- | ------------------------------------------------------------------------- |
+| `_config.yml`              | Main Jekyll config — site metadata, plugins, feature flags                |
+| `_pages/`                  | Top-level pages (about, CV, publications, projects, blog)                 |
+| `_posts/`                  | Blog posts (Markdown, front matter controls layout/tags)                  |
+| `_projects/`               | Research/portfolio project pages                                          |
+| `_bibliography/papers.bib` | BibTeX source for the publications page                                   |
+| `_news/`                   | Short announcement entries shown on the about page                        |
+| `_layouts/`                | Page-level Liquid templates                                               |
+| `_includes/`               | Reusable Liquid components                                                |
+| `_sass/`                   | SCSS stylesheets                                                          |
+| `_plugins/`                | Custom Ruby plugins (scholar citations, cache busting, BibTeX management) |
+| `_data/`                   | YAML data consumed by templates                                           |
+| `assets/`                  | Images, compiled CSS/JS, PDFs, and other static files                     |
 
 ### Key Conventions
 
