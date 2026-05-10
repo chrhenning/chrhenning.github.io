@@ -30,7 +30,18 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/cv/";
           },
-        },{id: "post-the-bayesian-story-behind-prior-fitted-networks",
+        },{id: "post-before-the-breakthrough-why-research-and-engineering-need-different-cultures",
+        
+          title: "Before the Breakthrough: Why Research and Engineering Need Different Cultures",
+        
+        description: "Research is not slow engineering. Why companies that want breakthroughs need to cherish two cultures, not collapse them into one.",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2026/before-the-breakthrough-research-engineering-cultures/";
+          
+        },
+      },{id: "post-the-bayesian-story-behind-prior-fitted-networks",
         
           title: "The Bayesian Story Behind Prior-Fitted Networks",
         
