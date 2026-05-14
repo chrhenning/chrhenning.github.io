@@ -118,7 +118,7 @@ The previous section made a structural point: PFNs reproduce Bayesian prediction
 
 ### The Bernstein–von Mises limit
 
-The first complication is asymptotic. Under regularity conditions, the **Bernstein–von Mises theorem** states that, as the dataset grows, the posterior $p(h \mid d)$ becomes approximately Gaussian and concentrates around the maximum likelihood estimate. In this regime, Bayesian model averaging collapses toward a point estimate, predictive uncertainty is governed by the local curvature of the likelihood, and the influence of the prior on predictions fades.
+The first complication is asymptotic. Under regularity conditions, the **Bernstein–von Mises theorem** states that, as the dataset grows, the posterior $p(h \mid d)$ becomes approximately Gaussian and concentrates around the maximum likelihood estimate. In this regime, Bayesian model averaging collapses towards a point estimate, predictive uncertainty is governed by the local curvature of the likelihood, and the influence of the prior on predictions fades.
 
 Methodologically, this is convenient. Interpretively, it is somewhat uncomfortable: a wide range of procedures, Bayesian and non-Bayesian alike, become indistinguishable in their predictions. Calling any one of them "Bayesian" tells us little about the underlying mechanism.
 
@@ -134,7 +134,7 @@ The learned object is therefore a conditional distribution over outputs given a 
 
 ### Bayesian guarantees on in-context learning assume exact inference
 
-A different angle on the question comes from recent work analysing in-context learning through Bayesian formalism <d-cite key="falck2024bayesian"></d-cite><d-cite key="muller2025position"></d-cite>. Two properties of true Bayesian predictors feature centrally in this line of work. First, predictions form a **martingale** as data accumulates: the current prediction is the conditional expectation of all future ones, so they fluctuate around it without systematic directional drift. Second, under exchangeability of the data, the order in which observations arrive does not affect the limiting prediction.
+A different angle on the question comes from recent work analysing in-context learning through Bayesian formalism <d-cite key="falck2024bayesian"></d-cite><d-cite key="muller2025position"></d-cite>. Two properties of true Bayesian predictors feature centrally in this line of work. First, predictions form a **martingale** as data accumulates: the current prediction is the conditional expectation of all future ones, so they fluctuate around it without systematic directional drift. Second, under exchangeability of the data, the order in which observations arrive does not affect the resulting prediction.
 
 These results are best read as _characterisations_. They describe what an exact Bayesian system must look like, not whether a given learned model in fact behaves that way. The training objective of a PFN is multi-task supervised learning; nothing in it enforces these properties.
 
