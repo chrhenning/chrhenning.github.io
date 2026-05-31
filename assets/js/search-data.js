@@ -30,7 +30,18 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/cv/";
           },
-        },{id: "post-the-self-before-memory-why-the-ai-you-talk-to-is-partly-your-creation",
+        },{id: "post-would-ai-invent-the-clock",
+        
+          title: "Would AI Invent the Clock?",
+        
+        description: "A provocative thought experiment. An LLM that knew only tokens would mistake their order for the structure of time, and we could break that belief without it ever noticing. The unsettling question is whether something could do the same to us.",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2026/would-ai-invent-the-clock/";
+          
+        },
+      },{id: "post-the-self-before-memory-why-the-ai-you-talk-to-is-partly-your-creation",
         
           title: "The Self Before Memory: Why the AI You Talk to Is Partly Your...",
         
