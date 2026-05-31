@@ -30,7 +30,18 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/cv/";
           },
-        },{id: "post-before-the-breakthrough-why-research-and-engineering-need-different-cultures",
+        },{id: "post-the-self-before-memory-why-the-ai-you-talk-to-is-partly-your-creation",
+        
+          title: "The Self Before Memory: Why the AI You Talk to Is Partly Your...",
+        
+        description: "Adding long-term memory to AI wouldn&#39;t just give it a stable self over time. It would force a design choice the discourse rarely names: one entity that consolidates many conversations, or many that diverge into a population of personalized selves.",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2026/the-self-before-memory/";
+          
+        },
+      },{id: "post-before-the-breakthrough-why-research-and-engineering-need-different-cultures",
         
           title: "Before the Breakthrough: Why Research and Engineering Need Different Cultures",
         
