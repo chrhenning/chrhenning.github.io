@@ -287,7 +287,6 @@ plugins:
   - al_cookie
   - al_analytics
   - al_citations
-  - al_ext_posts
   - al_img_tools
   - al_search
   - al_charts

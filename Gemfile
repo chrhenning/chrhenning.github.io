@@ -33,6 +33,9 @@ group :other_plugins do
     gem 'css_parser'
     gem 'observer'       # used by jekyll-scholar
     gem 'ostruct'        # used by jekyll-twitter-plugin
+    gem 'feedjira'       # used by _plugins/external-posts.rb
+    gem 'httparty'       # used by _plugins/external-posts.rb
+    gem 'nokogiri'       # used by _plugins/external-posts.rb
     # gem 'terser'         # used by jekyll-terser
     # gem 'unicode_utils' -- should be already installed by jekyll
     # gem 'webrick' -- should be already installed by jekyll
@@ -50,7 +53,6 @@ group :al_folio_plugins do
 
     gem 'al_analytics', '= 1.0.0'
     gem 'al_citations', '= 1.0.1'
-    gem 'al_ext_posts', '= 1.0.1'
     gem 'al_img_tools', '= 1.0.2'
     gem 'al_search', '= 1.0.2'
     gem 'al_charts', '= 1.0.1'

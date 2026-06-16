@@ -39,11 +39,6 @@ GEM
     al_cookie (1.0.0)
       jekyll (>= 3.9, < 5.0)
       liquid (>= 4.0, < 6.0)
-    al_ext_posts (1.0.1)
-      feedjira (>= 3.2, < 5.0)
-      httparty (>= 0.18, < 1.0)
-      jekyll (>= 3.9, < 5.0)
-      nokogiri (>= 1.13, < 2.0)
     al_folio_bootstrap_compat (1.0.0)
       jekyll (>= 3.9, < 5.0)
       liquid (>= 4.0, < 6.0)
@@ -350,7 +345,6 @@ DEPENDENCIES
   al_citations (= 1.0.1)
   al_comments (= 1.0.0)
   al_cookie (= 1.0.0)
-  al_ext_posts (= 1.0.1)
   al_folio_bootstrap_compat (= 1.0.0)
   al_folio_core (= 1.0.10)
   al_folio_cv (= 1.0.0)
@@ -363,6 +357,8 @@ DEPENDENCIES
   al_search (= 1.0.2)
   classifier-reborn
   css_parser
+  feedjira
+  httparty
   jekyll
   jekyll-3rd-party-libraries
   jekyll-archives-v2
@@ -384,6 +380,7 @@ DEPENDENCIES
   jekyll-toc
   jekyll-twitter-plugin
   jemoji
+  nokogiri
   observer
   ostruct
 
@@ -395,7 +392,6 @@ CHECKSUMS
   al_citations (1.0.1) sha256=308cfd4cd73c8dc6d24c0214f424b61606b3a393bdb899394fce80dd647cba59
   al_comments (1.0.0) sha256=1da87a29b55e4d9fd62d380200af9671f10ae4a84e3259828588498d8f3210e5
   al_cookie (1.0.0) sha256=0b36310f84c88e758fb18f2217e8fca8a282b8bd7f5ee9793c6d38ca0cc97348
-  al_ext_posts (1.0.1) sha256=432730bcf032e9da0277beded65511a6e836d4888bda19c9e0f58f9bc6cd2a1d
   al_folio_bootstrap_compat (1.0.0) sha256=c210ff3087f17344dc864fa9594c737e947b23c6cae9fab3dbd37a87090b98a8
   al_folio_core (1.0.10) sha256=13620d361f43e3bc8842f3655025e9688a6e494abb85770f085377bf60cdd678
   al_folio_cv (1.0.0) sha256=aa54c6efb38f46c5da09e09b82b4b050b5ce3b384f808922dc4fd665e10a840e
