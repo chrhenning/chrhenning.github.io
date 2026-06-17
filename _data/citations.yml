@@ -1,8 +1,8 @@
 metadata:
-  last_updated: '2026-06-03'
+  last_updated: '2026-06-17'
 papers:
   u6QSFrsAAAAJ:2osOgNQ5qMEC:
-    citations: 601
+    citations: 605
     title: Continual learning with hypernetworks
     year: '2020'
   u6QSFrsAAAAJ:LkGwnXOMwfcC:
@@ -10,11 +10,11 @@ papers:
     title: Population-level coding of avoidance learning in medial prefrontal cortex
     year: '2024'
   u6QSFrsAAAAJ:Tyk-4Ss8FVUC:
-    citations: 100
+    citations: 101
     title: Posterior Meta-Replay for Continual Learning
     year: '2021'
   u6QSFrsAAAAJ:UeHWp8X0CEIC:
-    citations: 49
+    citations: 51
     title: Neural networks with late-phase weights
     year: '2021'
   u6QSFrsAAAAJ:W7OEmFMy1HYC:
