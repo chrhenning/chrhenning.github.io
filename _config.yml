@@ -30,7 +30,7 @@ back_to_top: true # set to false to disable the back to top button
 repo_theme_light: default # https://github.com/anuraghazra/github-readme-stats/blob/master/themes/README.md
 repo_theme_dark: dark # https://github.com/anuraghazra/github-readme-stats/blob/master/themes/README.md
 repo_trophies:
-  enabled: true
+  enabled: false # github-profile-trophy.vercel.app deployment is disabled (HTTP 402); re-enable when a working host exists
   theme_light: flat # https://github.com/ryo-ma/github-profile-trophy
   theme_dark: gitdimmed # https://github.com/ryo-ma/github-profile-trophy
 
@@ -222,7 +222,6 @@ exclude:
   - _pages/profiles.md
   - _pages/projects.md
   - _pages/teaching.md
-  - _pages/repositories.md # Broken, see: https://github.com/alshedivat/al-folio/issues/3388#issuecomment-3708678455
   - _projects/?_project.md
   - assets/jupyter/blog.ipynb
   - al-folio-upgrade-report.md
