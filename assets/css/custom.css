@@ -1,1 +1,8 @@
-.references{grid-column:text;contain:style}.references .title{font-weight:500}
+.references {
+  grid-column: text;
+  contain: style;
+}
+
+.references .title {
+  font-weight: 500;
+}

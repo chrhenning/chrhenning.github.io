@@ -1,5 +1,284 @@
-<!DOCTYPE html> <html lang="en"> <head> <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"> <meta name="google-site-verification" content="XfdYQlT1Npbtc2Eq127U8DCaZS5uaW54xv3kH898iVM"> <meta http-equiv="Permissions-Policy" content="interest-cohort=()"> <meta charset="utf-8"> <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"> <meta http-equiv="X-UA-Compatible" content="IE=edge"> <title> mvp | Christian Henning </title> <meta name="author" content="Christian Henning"> <meta name="description" content="Personal website of Christian Henning, machine learning researcher focused on industrial AI, continual learning, uncertainty estimation, and the neuroscience of intelligent systems. Currently working on real-world vision applications in industry. "> <meta name="keywords" content="christian henning, continual learning, bayesian neural networks, machine learning, computer vision, ai research"> <link rel="stylesheet" href="/assets/css/bootstrap.min.css?a4b3f509e79c54a512b890d73235ef04"> <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/mdbootstrap@4.20.0/css/mdb.min.css" integrity="sha256-jpjYvU3G3N6nrrBwXJoVEYI/0zw8htfFnhT9ljN3JJw=" crossorigin="anonymous"> <link defer rel="stylesheet" href="/assets/css/academicons.min.css?f0b7046b84e425c55f3463ac249818f5"> <link defer rel="stylesheet" href="/assets/css/scholar-icons.css?62b2ac103a88034e6882a5be5f3e2772"> <link defer rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:100,300,400,500,700|Material+Icons&amp;display=swap"> <link defer rel="stylesheet" href="/assets/css/jekyll-pygments-themes-github.css?591dab5a4e56573bf4ef7fd332894c99" media="" id="highlight_theme_light"> <link rel="shortcut icon" href="/assets/img/favicon.png?89d6daffeab634d3ec947136dcc4f478"> <link rel="stylesheet" href="/assets/css/main.css?d41d8cd98f00b204e9800998ecf8427e"> <link rel="canonical" href="https://chrhenning.com/blog/tag/mvp/"> <script src="/assets/js/theme.js?48c9b5bd7f2e0605e39e579400e22553"></script> <link defer rel="stylesheet" href="/assets/css/jekyll-pygments-themes-native.css?5847e5ed4a4568527aa6cfab446049ca" media="none" id="highlight_theme_dark"> <script>
+<!DOCTYPE html> <html lang="en"> <head> <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"> <meta name="google-site-verification" content="XfdYQlT1Npbtc2Eq127U8DCaZS5uaW54xv3kH898iVM"> <meta http-equiv="Permissions-Policy" content="interest-cohort=()"> <meta charset="utf-8"> <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"> <meta http-equiv="X-UA-Compatible" content="IE=edge"> <title> mvp | Christian Henning </title> <meta name="author" content="Christian Henning"> <meta name="description" content="Personal website of Christian Henning, machine learning researcher focused on industrial AI, continual learning, uncertainty estimation, and the neuroscience of intelligent systems. Currently working on real-world vision applications in industry. "> <meta name="keywords" content="christian henning, continual learning, bayesian neural networks, machine learning, computer vision, ai research"> <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https:; style-src 'self' 'unsafe-inline' https:; img-src 'self' data: https:; font-src 'self' data: https:; media-src 'self' https:; frame-src 'self' https:; connect-src 'self' https:;"> <style>
+  :root {
+    --max-content-width: 930px;
+  }
+</style> <link rel="stylesheet" href="/assets/css/tailwind.css?50c64c15cbb9fd1ce6056fdb8bcb4b62"> <link defer rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@7.2.0/css/all.min.css" integrity="sha256-MVopmdyC2tYTiJ8wlktf0uh0v4NgT+vNdyVFepi7Q0c=" crossorigin="anonymous"> <link defer rel="stylesheet" href="https://cdn.jsdelivr.net/npm/academicons@1.9.5/css/academicons.min.css" integrity="sha256-SzrCOBJbGVFMahewkgjwnApaV2+av1DwMAA+/QGLyZw=" crossorigin="anonymous"> <link defer rel="stylesheet" href="https://cdn.jsdelivr.net/npm/scholar-icons@1.0.3/css/scholar-icons.css" integrity="sha256-VY3hHVj/hNX3fYG6wtbA6TcKJQl7+FthzGSyIB64klY=" crossorigin="anonymous"> <link defer rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:100,300,400,500,700|Material+Icons&amp;display=swap"> <link defer rel="stylesheet" href="/assets/css/jekyll-pygments-themes-github.css?591dab5a4e56573bf4ef7fd332894c99" media="" id="highlight_theme_light"> <link rel="shortcut icon" href="/assets/img/favicon.png?89d6daffeab634d3ec947136dcc4f478"> <link rel="stylesheet" href="/assets/css/main.css?9278fad11fbb7f97e25b00cf0f4948af"> <link rel="canonical" href="https://chrhenning.com/blog/tag/mvp/"> <script src="/assets/js/theme.js?7af685e2ba20b37fef545c97b8064050"></script> <link defer rel="stylesheet" href="/assets/css/jekyll-pygments-themes-native.css?5847e5ed4a4568527aa6cfab446049ca" media="none" id="highlight_theme_dark"> <script>
     initTheme();
-  </script> </head> <body class="fixed-top-nav "> <header> <nav id="navbar" class="navbar navbar-light navbar-expand-sm fixed-top" role="navigation"> <div class="container"> <a class="navbar-brand title font-weight-lighter" href="/"> <span class="font-weight-bold">Christian</span> Henning </a> <button class="navbar-toggler collapsed ml-auto" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar top-bar"></span> <span class="icon-bar middle-bar"></span> <span class="icon-bar bottom-bar"></span> </button> <div class="collapse navbar-collapse text-right" id="navbarNav"> <ul class="navbar-nav ml-auto flex-nowrap"> <li class="nav-item "> <a class="nav-link" href="/">about </a> </li> <li class="nav-item active"> <a class="nav-link" href="/blog/">blog </a> </li> <li class="nav-item "> <a class="nav-link" href="/publications/">publications </a> </li> <li class="nav-item "> <a class="nav-link" href="/cv/">cv </a> </li> <li class="nav-item"> <button id="search-toggle" title="Search" onclick="openSearchModal()"> <span class="nav-link">ctrl k <i class="ti ti-search"></i></span> </button> </li> <li class="toggle-container"> <button id="light-toggle" title="Change theme"> <i class="ti ti-sun-moon" id="light-toggle-system"></i> <i class="ti ti-moon-filled" id="light-toggle-dark"></i> <i class="ti ti-sun-filled" id="light-toggle-light"></i> </button> </li> </ul> </div> </div> </nav> <progress id="progress" value="0"> <div class="progress-container"> <span class="progress-bar"></span> </div> </progress> </header> <div class="container mt-5" role="main"> <div class="post"> <header class="post-header"> <h1 class="post-title"> <i class="fa-solid fa-hashtag fa-sm"></i> mvp</h1> <p class="post-description">an archive of posts with this tag</p> </header> <article class="archive"> <div class="table-responsive"> <table class="table table-sm table-borderless"> <tr> <th scope="row">Oct 31, 2025</th> <td> <a class="post-link" href="/blog/2025/scrappiness-incentivizes-sloppiness/">Scrappiness Incentivizes Sloppiness - Why Lean Thinking and Debt Management Build Better Products</a> </td> </tr> <tr> <th scope="row">Jul 25, 2025</th> <td> <a class="post-link" href="/blog/2025/mvp-manage-debt-and-iterate-fast/">Smart Debt Management - The Key to Fast MVP Iteration</a> </td> </tr> </table> </div> </article> </div> </div> <footer class="fixed-bottom" role="contentinfo"> <div class="container mt-0"> © Copyright 2026 Christian Henning. Powered by <a href="https://jekyllrb.com/" target="_blank" rel="external nofollow noopener">Jekyll</a> using <a href="https://github.com/alshedivat/al-folio" rel="external nofollow noopener" target="_blank">al-folio</a>. Hosted on <a href="https://pages.github.com/" target="_blank" rel="external nofollow noopener">GitHub Pages</a>. <a href="/privacy">Privacy Policy</a>. Last updated: June 17, 2026. </div> </footer> <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script> <script src="/assets/js/bootstrap.bundle.min.js"></script> <script src="https://cdn.jsdelivr.net/npm/mdbootstrap@4.20.0/js/mdb.min.js" integrity="sha256-NdbiivsvWt7VYCt6hYNT3h/th9vSTL4EDWeGs5SN3DA=" crossorigin="anonymous"></script> <script defer src="https://cdn.jsdelivr.net/npm/masonry-layout@4.2.2/dist/masonry.pkgd.min.js" integrity="sha256-Nn1q/fx0H7SNLZMQ5Hw5JLaTRZp0yILA/FRexe19VdI=" crossorigin="anonymous"></script> <script defer src="https://cdn.jsdelivr.net/npm/imagesloaded@5.0.0/imagesloaded.pkgd.min.js" integrity="sha256-htrLFfZJ6v5udOG+3kNLINIKh2gvoKqwEhHYfTTMICc=" crossorigin="anonymous"></script> <script defer src="/assets/js/masonry.js?a0db7e5d5c70cc3252b3138b0c91dcaf" type="text/javascript"></script> <script defer src="https://cdn.jsdelivr.net/npm/medium-zoom@1.1.0/dist/medium-zoom.min.js" integrity="sha256-ZgMyDAIYDYGxbcpJcfUnYwNevG/xi9OHKaR/8GK+jWc=" crossorigin="anonymous"></script> <script defer src="/assets/js/zoom.js?85ddb88934d28b74e78031fd54cf8308"></script> <script src="/assets/js/no_defer.js?2781658a0a2b13ed609542042a859126"></script> <script defer src="/assets/js/common.js?c15de51d4bb57887caa2c21988d97279"></script> <script defer src="/assets/js/copy_code.js?c8a01c11a92744d44b093fc3bda915df" type="text/javascript"></script> <script defer src="/assets/js/jupyter_new_tab.js?d9f17b6adc2311cbabd747f4538bb15f"></script> <script async src="https://d1bxh8uas1mnw7.cloudfront.net/assets/embed.js"></script> <script async src="https://badge.dimensions.ai/badge.js"></script> <script defer type="text/javascript" id="MathJax-script" src="https://cdn.jsdelivr.net/npm/mathjax@3.2.2/es5/tex-mml-chtml.js" integrity="sha256-MASABpB4tYktI2Oitl4t+78w/lyA+D7b/s9GEP0JOGI=" crossorigin="anonymous"></script> <script src="/assets/js/mathjax-setup.js?a5bb4e6a542c546dd929b24b8b236dfd"></script> <script defer src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6" crossorigin="anonymous"></script> <script async src="https://www.googletagmanager.com/gtag/js?id=G-B1S4NL59R1"></script> <script defer src="/assets/js/google-analytics-setup.js"></script> <script defer src="/assets/js/progress-bar.js?2f30e0e6801ea8f5036fa66e1ab0a71a" type="text/javascript"></script> <script src="/assets/js/vanilla-back-to-top.min.js?f40d453793ff4f64e238e420181a1d17"></script> <script>
+  </script> </head> <body class="fixed-top-nav "> <header> <nav id="navbar" class="navbar navbar-light navbar-expand-sm fixed-top" role="navigation"> <div class="container"> <a class="navbar-brand title font-weight-lighter" href="/"> <span class="font-weight-bold">Christian</span> Henning </a> <button class="navbar-toggler collapsed navbar-toggler-main" type="button" data-nav-toggle="navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar top-bar"></span> <span class="icon-bar middle-bar"></span> <span class="icon-bar bottom-bar"></span> </button> <div class="collapse navbar-collapse navbar-collapse-main" id="navbarNav"> <ul class="navbar-nav navbar-menu-list flex-nowrap"> <li class="nav-item "> <a class="nav-link" href="/">about </a> </li> <li class="nav-item active"> <a class="nav-link" href="/blog/">blog </a> </li> <li class="nav-item "> <a class="nav-link" href="/publications/">publications </a> </li> <li class="nav-item "> <a class="nav-link" href="/cv/">CV </a> </li> <li class="nav-item"> <button id="search-toggle" type="button" title="Search" aria-label="Open search"> <span class="nav-link">ctrl k <i class="fa-solid fa-magnifying-glass"></i></span> </button> </li> <li class="toggle-container"> <button id="light-toggle" type="button" title="Change theme" aria-label="Change color theme"> <i class="fa-half-sun-moon" id="light-toggle-system"></i> <i class="fa-solid fa-moon" id="light-toggle-dark"></i> <i class="fa-solid fa-sun" id="light-toggle-light"></i> </button> </li> </ul> </div> </div> </nav> <progress id="progress" value="0"> <div class="progress-container"> <span class="progress-bar"></span> </div> </progress> </header> <div class="container mt-5" role="main"> <div class="post"> <header class="post-header"> <h1 class="post-title"> <i class="fa-solid fa-hashtag fa-sm"></i> mvp</h1> <p class="post-description">an archive of posts with this tag</p> </header> <article class="archive"> <div class="table-responsive"> <table class="table table-sm table-borderless"> <tr> <th scope="row">Oct 31, 2025</th> <td> <a class="post-link" href="/blog/2025/scrappiness-incentivizes-sloppiness/">Scrappiness Incentivizes Sloppiness - Why Lean Thinking and Debt Management Build Better Products</a> </td> </tr> <tr> <th scope="row">Jul 25, 2025</th> <td> <a class="post-link" href="/blog/2025/mvp-manage-debt-and-iterate-fast/">Smart Debt Management - The Key to Fast MVP Iteration</a> </td> </tr> </table> </div> </article> </div> </div> <footer class="fixed-bottom" role="contentinfo"> <div class="container mt-0"> © Copyright 2026 Christian Henning. Powered by <a href="https://jekyllrb.com/" target="_blank" rel="external nofollow noopener">Jekyll</a> using <a href="https://github.com/alshedivat/al-folio" rel="external nofollow noopener" target="_blank">al-folio</a>. Hosted on <a href="https://pages.github.com/" target="_blank" rel="external nofollow noopener">GitHub Pages</a>. <a href="/privacy">Privacy Policy</a>. Last updated: June 19, 2026. </div> </footer> <script>
+  window.alFolio = {
+    compatBootstrap: false
+  };
+</script> <script src="/assets/js/nav-toggle.js?141bd79a73ebc0f0b6ea58e440ae79fc"></script> <script defer src="https://cdn.jsdelivr.net/npm/masonry-layout@4.2.2/dist/masonry.pkgd.min.js" integrity="sha256-Nn1q/fx0H7SNLZMQ5Hw5JLaTRZp0yILA/FRexe19VdI=" crossorigin="anonymous"></script> <script defer src="https://cdn.jsdelivr.net/npm/imagesloaded@5.0.0/imagesloaded.pkgd.min.js" integrity="sha256-htrLFfZJ6v5udOG+3kNLINIKh2gvoKqwEhHYfTTMICc=" crossorigin="anonymous"></script> <script defer src="/assets/js/masonry.js?e49affc7bd2646f6acdad1dbe02c2359" type="text/javascript"></script> <script defer type="text/javascript" id="MathJax-script" src="https://cdn.jsdelivr.net/npm/mathjax@3.2.2/es5/tex-mml-chtml.js" integrity="sha256-MASABpB4tYktI2Oitl4t+78w/lyA+D7b/s9GEP0JOGI=" crossorigin="anonymous"></script> <script src="/assets/al_math/js/mathjax-setup.js"></script> <script defer src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6" crossorigin="anonymous"></script> <script src="/assets/js/tooltips-setup.js?fe487e99db6c43751e6e7bdb2d6a0611"></script> <script src="/assets/js/no_defer.js?53b1b1a645525975c963ce8bf8bfefcf"></script> <script defer src="/assets/js/common.js?87baac90f765f2f3362dcf6aaf312a8a"></script> <script defer src="/assets/js/copy_code.js?c8a01c11a92744d44b093fc3bda915df" type="text/javascript"></script> <script defer src="/assets/js/jupyter_new_tab.js?896d254890d9b47f0281f63bfccf0dee"></script> <script async src="https://d1bxh8uas1mnw7.cloudfront.net/assets/embed.js"></script> <script async src="https://badge.dimensions.ai/badge.js"></script> <script async src="https://www.googletagmanager.com/gtag/js?id=G-B1S4NL59R1"></script> <script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag() {
+    window.dataLayer.push(arguments);
+  }
+  gtag("js", new Date());
+  gtag("config", "G-B1S4NL59R1");
+</script> <script defer src="https://cdn.jsdelivr.net/npm/medium-zoom@1.1.0/dist/medium-zoom.min.js" integrity="sha256-ZgMyDAIYDYGxbcpJcfUnYwNevG/xi9OHKaR/8GK+jWc=" crossorigin="anonymous"></script> <script defer src="/assets/al_img_tools/js/zoom.js"></script> <script defer src="/assets/js/progress-bar.js?499464c5c63ced6cf7ad62509f1e2610" type="text/javascript"></script> <script src="https://cdn.jsdelivr.net/npm/vanilla-back-to-top@7.2.1/dist/vanilla-back-to-top.min.js" integrity="sha256-uMJJ3EoTyfRBoTbR+lrfu1uRQ87RZG8AR3cVNuQVeFg=" crossorigin="anonymous"></script> <script>
     addBackToTop();
-  </script> <script type="module" src="/assets/js/search/ninja-keys.min.js?a3446f084dcaecc5f75aa1757d087dcf"></script> <ninja-keys hidebreadcrumbs noautoloadmdicons placeholder="Type to start searching"></ninja-keys> <script src="/assets/js/search-setup.js?6c304f7b1992d4b60f7a07956e52f04a"></script> <script src="/assets/js/search-data.js"></script> <script src="/assets/js/shortcut-key.js?6f508d74becd347268a7f822bca7309d"></script> </body> </html>
+  </script> <script type="module" src="/assets/al_search/js/search/ninja-keys.min.js"></script> <ninja-keys hidebreadcrumbs noautoloadmdicons placeholder="Type to start searching"></ninja-keys> <script src="/assets/al_search/js/search-setup.js"></script> <script>
+// get the ninja-keys element
+const ninja = document.querySelector('ninja-keys');
+
+// add the home and posts menu items
+ninja.data = [{
+    id: "nav-about",
+    title: "about",
+    section: "Navigation",
+    handler: () => {
+      window.location.href = "/";
+    },
+  },{id: "nav-blog",
+          title: "blog",
+          description: "",
+          section: "Navigation",
+          handler: () => {
+            window.location.href = "/blog/";
+          },
+        },{id: "nav-publications",
+          title: "publications",
+          description: "",
+          section: "Navigation",
+          handler: () => {
+            window.location.href = "/publications/";
+          },
+        },{id: "nav-cv",
+          title: "CV",
+          description: "This is a brief summary of my professional background. For more details, please see my LinkedIn profile.",
+          section: "Navigation",
+          handler: () => {
+            window.location.href = "/cv/";
+          },
+        },{id: "post-would-ai-invent-the-clock",
+        
+          title: "Would AI Invent the Clock?",
+        
+        description: "A provocative thought experiment. An LLM that knew only tokens would mistake their order for the structure of time, and we could break that belief without it ever noticing. The unsettling question is whether something could do the same to us.",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2026/would-ai-invent-the-clock/";
+          
+        },
+      },{id: "post-the-self-before-memory-why-the-ai-you-talk-to-is-partly-your-creation",
+        
+          title: "The Self Before Memory: Why the AI You Talk to Is Partly Your...",
+        
+        description: "Adding long-term memory to AI wouldn&#39;t just give it a stable self over time. It would force a design choice the discourse rarely names: one entity that consolidates many conversations, or many that diverge into a population of personalized selves.",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2026/the-self-before-memory/";
+          
+        },
+      },{id: "post-before-the-breakthrough-why-research-and-engineering-need-different-cultures",
+        
+          title: "Before the Breakthrough: Why Research and Engineering Need Different Cultures",
+        
+        description: "Research is not slow engineering. Why companies that want breakthroughs need to cherish two cultures, not collapse them into one.",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2026/before-the-breakthrough-research-engineering-cultures/";
+          
+        },
+      },{id: "post-the-bayesian-story-behind-prior-fitted-networks",
+        
+          title: "The Bayesian Story Behind Prior-Fitted Networks",
+        
+        description: "PFNs are often described as Bayesian predictors, but their training objective and inference mechanism suggest a more nuanced interpretation.",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2026/the-bayesian-story-of-pfns/";
+          
+        },
+      },{id: "post-why-uncertainty-in-machine-learning-is-conceptually-broken",
+        
+          title: "Why Uncertainty in Machine Learning Is Conceptually Broken",
+        
+        description: "A critique of why modern ML uncertainty estimates lack clear semantics, reliable evaluation, and meaningful use cases.",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2026/uncertainty-decomposition/";
+          
+        },
+      },{id: "post-code-sharing-at-scale-in-python-monorepos-with-a-single-version-policy",
+        
+          title: "Code Sharing at Scale in Python Monorepos with a Single Version Policy",
+        
+        description: "How structuring internal modules as installable packages in a monorepo enables controlled code reuse across many containers — while keeping images lean and dependency management centralized.",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2026/code-sharing-in-monorepos/";
+          
+        },
+      },{id: "post-why-your-next-visual-quality-inspection-system-will-be-training-free",
+        
+          title: 'Why your next visual quality inspection system will be training-free <svg width="1.2rem" height="1.2rem" top=".5rem" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg"><path d="M17 13.5v6H5v-12h6m3-3h6v6m0-6-9 9" class="icon_svg-stroke" stroke="#999" stroke-width="1.5" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round"></path></svg>',
+        
+        description: "Why visual inspection should rely on approaches that do not require images of defective products for training.",
+        section: "Posts",
+        handler: () => {
+          
+            window.open("https://ethon.ai/why-your-next-visual-quality-inspection-system-will-be-training-free/", "_blank");
+          
+        },
+      },{id: "post-continual-learning-the-missing-piece-of-agi",
+        
+          title: "Continual Learning - The Missing Piece of AGI",
+        
+        description: "A new definition of AGI highlights what&#39;s still missing — the ability to learn continually — and why its absence makes predicting AGI&#39;s arrival impossible.",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2025/agi-misses-continual-learning/";
+          
+        },
+      },{id: "post-scrappiness-incentivizes-sloppiness-why-lean-thinking-and-debt-management-build-better-products",
+        
+          title: "Scrappiness Incentivizes Sloppiness - Why Lean Thinking and Debt Management Build Better Products...",
+        
+        description: "Scrappiness is often mistaken for agility, but in practice it breeds unmanaged debt; a lean, debt-aware mindset achieves speed without sacrificing integrity.",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2025/scrappiness-incentivizes-sloppiness/";
+          
+        },
+      },{id: "post-when-bayesian-uncertainty-becomes-memory-a-path-to-continual-learning",
+        
+          title: "When Bayesian Uncertainty Becomes Memory - A Path to Continual Learning",
+        
+        description: "By inverting uncertainty into density, a model can recreate its own past and learn continuously without explicit replay buffers.",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2025/uncertainty-can-solve-continual-learning/";
+          
+        },
+      },{id: "post-technology-readiness-debt-building-before-the-future-arrives",
+        
+          title: "Technology Readiness Debt – Building Before the Future Arrives",
+        
+        description: "Technology Readiness Debt (TRD) is the gap between today&#39;s imperfect technology and tomorrow&#39;s vision — a strategic debt you carry to learn early, but one that only R&amp;D can repay on your terms.",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2025/technology-readiness-debt/";
+          
+        },
+      },{id: "post-smart-debt-management-the-key-to-fast-mvp-iteration",
+        
+          title: "Smart Debt Management - The Key to Fast MVP Iteration",
+        
+        description: "MVPs validate ideas fast, but unmanaged debt — technical, strategic, or feature — can stall iteration. Success lies in balancing speed with conscious debt management.",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2025/mvp-manage-debt-and-iterate-fast/";
+          
+        },
+      },{id: "post-why-an-mse-loss-might-make-your-self-driving-car-crash",
+        
+          title: "Why an MSE Loss Might Make Your Self-Driving Car Crash",
+        
+        description: "This article explains why using MSE to train steering angle prediction can be a recipe for disaster.",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2025/when-mse-loss-leads-to-mis-steering/";
+          
+        },
+      },{id: "post-on-anthropomorphizing-token-traces",
+        
+          title: "On Anthropomorphizing Token Traces",
+        
+        description: "My thoughts on the paper &#39;Stop Anthropomorphizing Intermediate Tokens as Reasoning/Thinking Traces!&#39;",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2025/on-anthropomorphizing-intermediate-tokens/";
+          
+        },
+      },{id: "post-industrial-anomaly-detection-using-only-defect-free-images-to-train-your-inspection-model",
+        
+          title: 'Industrial anomaly detection: Using only defect-free images to train your inspection model <svg width="1.2rem" height="1.2rem" top=".5rem" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg"><path d="M17 13.5v6H5v-12h6m3-3h6v6m0-6-9 9" class="icon_svg-stroke" stroke="#999" stroke-width="1.5" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round"></path></svg>',
+        
+        description: "Visual inspection should not require long setup or labeling. One example should be enough to deliver reliable results. Here&#39;s how.",
+        section: "Posts",
+        handler: () => {
+          
+            window.open("https://ethon.ai/industrial-anomaly-detection-using-only-defect-free-images-to-train-your-model/", "_blank");
+          
+        },
+      },{id: "teachings-data-science-fundamentals",
+          title: 'Data Science Fundamentals',
+          description: "This course covers the foundational aspects of data science, including data collection, cleaning, analysis, and visualization. Students will learn practical skills for working with real-world datasets.",
+          section: "Teachings",handler: () => {
+              window.location.href = "/teachings/data-science-fundamentals/";
+            },},{id: "teachings-introduction-to-machine-learning",
+          title: 'Introduction to Machine Learning',
+          description: "This course provides an introduction to machine learning concepts, algorithms, and applications. Students will learn about supervised and unsupervised learning, model evaluation, and practical implementations.",
+          section: "Teachings",handler: () => {
+              window.location.href = "/teachings/introduction-to-machine-learning/";
+            },},{
+        id: 'social-github',
+        title: 'GitHub',
+        section: 'Socials',
+        handler: () => {
+          window.open("https://github.com/chrhenning", "_blank");
+        },
+      },{
+        id: 'social-linkedin',
+        title: 'LinkedIn',
+        section: 'Socials',
+        handler: () => {
+          window.open("https://www.linkedin.com/in/christian-henning", "_blank");
+        },
+      },{
+        id: 'social-scholar',
+        title: 'Google Scholar',
+        section: 'Socials',
+        handler: () => {
+          window.open("https://scholar.google.com/citations?user=u6QSFrsAAAAJ", "_blank");
+        },
+      },{
+        id: 'social-x',
+        title: 'X',
+        section: 'Socials',
+        handler: () => {
+          window.open("https://twitter.com/chr_henning", "_blank");
+        },
+      },{
+      id: 'light-theme',
+      title: 'Change theme to light',
+      description: 'Change the theme of the site to Light',
+      section: 'Theme',
+      handler: () => {
+        setThemeSetting("light");
+      },
+    },
+    {
+      id: 'dark-theme',
+      title: 'Change theme to dark',
+      description: 'Change the theme of the site to Dark',
+      section: 'Theme',
+      handler: () => {
+        setThemeSetting("dark");
+      },
+    },
+    {
+      id: 'system-theme',
+      title: 'Use system default theme',
+      description: 'Change the theme of the site to System Default',
+      section: 'Theme',
+      handler: () => {
+        setThemeSetting("system");
+      },
+    },];
+
+</script> <script src="/assets/al_search/js/shortcut-key.js"></script> </body> </html>
