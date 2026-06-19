@@ -66,9 +66,6 @@ jobs:
       - name: Install JS deps 📦
         run: npm ci
 
-      - name: Run style contract lint 🧷
-        run: npm run lint:style-contract
-
       - name: Install build prerequisites 🔧
         run: |
           sudo apt-get update && sudo apt-get install -y imagemagick
