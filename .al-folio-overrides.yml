@@ -1,0 +1,10 @@
+---
+version: 1
+overrides:
+  _layouts/distill.liquid:
+    owner: al_folio_core
+    gem_version: 1.0.10
+    upstream_path: _layouts/distill.liquid
+    upstream_sha256: 3610cdd2f384d05d2e30669ffc8e3696552b1fb22017a41a3224187d88f9d803
+    local_sha256: 04c07fec7b1e583e01d7a2c13e227562b08d18235f7ede366f73641a427f519f
+    acknowledged_at: "2026-06-17"
