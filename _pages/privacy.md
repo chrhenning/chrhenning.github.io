@@ -10,19 +10,23 @@ This website is operated by Christian Henning and is a personal, non-commercial 
 
 ### Cookies and Consent
 
-On your first visit, a banner asks whether you accept analytics cookies. No analytics cookies are set and no analytics data is collected unless you consent. Your choice is saved in a single cookie so the banner does not reappear; this is the only cookie stored if you decline. To withdraw or change your consent, clear this site's cookies in your browser — the banner will then reappear on your next visit.
+On your first visit, a banner asks whether you accept analytics cookies. No such cookies are set unless you consent. Your choice is saved in a single cookie so the banner does not reappear; this is the only cookie stored if you decline. To change it, clear this site's cookies and the banner will reappear.
 
 ### Google Analytics
 
 If you consent, this site uses [Google Analytics 4](https://analytics.google.com/) to understand how visitors use it. It may collect the pages you visit, time spent on them, your device and browser type, and your approximate location (city or country). This data is processed by Google and may be transferred abroad, including to the United States. See Google's [Privacy Policy](https://policies.google.com/privacy) for details.
 
+### Cloudflare Web Analytics
+
+This site uses [Cloudflare Web Analytics](https://www.cloudflare.com/web-analytics/) to measure aggregate traffic such as page views and referrers. It uses no cookies and does not identify individual visitors, so no consent is required. To compile these statistics, Cloudflare, Inc. (United States) processes technical request data including your IP address. See Cloudflare's [Privacy Policy](https://www.cloudflare.com/privacypolicy/).
+
 ### Hosting
 
-This website is hosted on [GitHub Pages](https://pages.github.com/), a service of GitHub, Inc. (88 Colin P. Kelly Jr. St., San Francisco, CA 94107, United States). When you visit, GitHub may process technical data such as your IP address and browser type. See GitHub's [Privacy Statement](https://docs.github.com/en/site-policy/privacy-policies/github-privacy-statement).
+This website is hosted on [GitHub Pages](https://pages.github.com/), a service of GitHub, Inc. (88 Colin P. Kelly Jr. St., San Francisco, CA 94107, United States). When you visit, GitHub may process technical data such as your IP address and browser type. See GitHub's [Privacy Statement](https://docs.github.com/en/site-policy/privacy-policies/github-privacy-statement). Traffic to this site is routed through [Cloudflare](https://www.cloudflare.com/) as a content delivery network and proxy, which likewise processes technical request data such as your IP address.
 
 ### Your Rights
 
-This site stores very little personal data directly. Comments are managed via GitHub, and analytics data is held by Google in anonymized form. You may contact me with any request regarding your data, and I will act on it or direct you to the relevant provider.
+This site stores very little personal data directly; comments are managed via GitHub, and analytics by the providers named above. Contact me with any request regarding your data, and I will act on it or direct you to the relevant provider.
 
 ### Contact
 
