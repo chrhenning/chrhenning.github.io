@@ -8,6 +8,14 @@
 
 {% if site.plugins contains 'al_folio_distill' and distill_feature_enabled %}
   {% al_folio_distill_render %}
+  {% comment %}
+    The distill renderer emits its own document and skips scripts.liquid, so the
+    newsletter form (from footer.liquid) ships without its JS. Inject it here,
+    mirroring scripts.liquid's conditions.
+  {% endcomment %}
+  {% if site.newsletter.enabled and site.plugins contains 'al_newsletter' %}
+    {% include plugins/al_newsletter_scripts.liquid %}
+  {% endif %}
   <script>
     document.addEventListener('DOMContentLoaded', function () {
       var appendix = document.querySelector('d-appendix');
