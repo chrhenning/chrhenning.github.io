@@ -22,7 +22,7 @@ This site uses [Cloudflare Web Analytics](https://www.cloudflare.com/web-analyti
 
 ### Hosting
 
-This website is hosted on [GitHub Pages](https://pages.github.com/), a service of GitHub, Inc. (88 Colin P. Kelly Jr. St., San Francisco, CA 94107, United States). When you visit, GitHub may process technical data such as your IP address and browser type. See GitHub's [Privacy Statement](https://docs.github.com/en/site-policy/privacy-policies/github-privacy-statement). Traffic to this site is routed through [Cloudflare](https://www.cloudflare.com/) as a content delivery network and proxy, which likewise processes technical request data such as your IP address.
+This website is hosted on [GitHub Pages](https://pages.github.com/), a service of GitHub, Inc. (88 Colin P. Kelly Jr. St., San Francisco, CA 94107, United States). When you visit, GitHub may process technical data such as your IP address and browser type. See GitHub's [Privacy Statement](https://docs.github.com/en/site-policy/privacy-policies/github-privacy-statement). DNS for this domain is provided by [Cloudflare](https://www.cloudflare.com/), which may process technical data such as your IP address when resolving the site's address.
 
 ### Your Rights
 
@@ -31,4 +31,4 @@ This site stores very little personal data directly; comments are managed via Gi
 ### Contact
 
 **Christian Henning**
-Email: [chrhenning@web.de](mailto:chrhenning@web.de)
+Email: [contact@chrhenning.com](mailto:contact@chrhenning.com)
