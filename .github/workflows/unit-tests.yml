@@ -1,42 +1,10 @@
 name: Integration tests
 
+# Disabled on this fork: these tests assert against stock al-folio demo content
+# (e.g. blog/2022/giscus-comments) that this customized site removed. Manual
+# trigger only.
 on:
-  push:
-    branches:
-      - master
-      - main
-      - v1.0-dev
-    paths:
-      - "Gemfile"
-      - "Gemfile.lock"
-      - "_config.yml"
-      - "_data/**"
-      - "_pages/**"
-      - "_posts/**"
-      - "_projects/**"
-      - "assets/**"
-      - "test/**"
-      - "package.json"
-      - "package-lock.json"
-      - ".github/workflows/unit-tests.yml"
-  pull_request:
-    branches:
-      - master
-      - main
-      - v1.0-dev
-    paths:
-      - "Gemfile"
-      - "Gemfile.lock"
-      - "_config.yml"
-      - "_data/**"
-      - "_pages/**"
-      - "_posts/**"
-      - "_projects/**"
-      - "assets/**"
-      - "test/**"
-      - "package.json"
-      - "package-lock.json"
-      - ".github/workflows/unit-tests.yml"
+  workflow_dispatch:
 
 jobs:
   comments-integration-tests:
