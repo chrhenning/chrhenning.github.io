@@ -1,17 +1,14 @@
 {% comment %}
-  Local override of al_folio_core's _layouts/distill.liquid.
-  Faithful copy of the gem layout, plus a small script that injects a custom
-  Disclaimer into distill's d-appendix. Re-sync the if/else branches against
-  the gem when bumping al_folio_core.
+  Local override of al_folio_core's _layouts/distill.liquid: adds the newsletter
+  JS (see below) and a Disclaimer in d-appendix. Re-sync against the gem on upgrade.
 {% endcomment %}
 {% assign distill_feature_enabled = site.al_folio.features.distill.enabled | default: true %}
 
 {% if site.plugins contains 'al_folio_distill' and distill_feature_enabled %}
   {% al_folio_distill_render %}
   {% comment %}
-    The distill renderer emits its own document and skips scripts.liquid, so the
-    newsletter form (from footer.liquid) ships without its JS. Inject it here,
-    mirroring scripts.liquid's conditions.
+    distill renders its own document and skips scripts.liquid, so inject the
+    newsletter JS here (mirroring scripts.liquid's conditions).
   {% endcomment %}
   {% if site.newsletter.enabled and site.plugins contains 'al_newsletter' %}
     {% include plugins/al_newsletter_scripts.liquid %}
