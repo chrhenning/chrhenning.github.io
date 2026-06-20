@@ -1,0 +1,7 @@
+{% comment %}
+  Local override of al_folio_core's plugins/al_newsletter_form_center_margin.liquid.
+  Renders our own form (newsletter_form.liquid) instead of the gem's
+  {% raw %}{% al_newsletter_form %}{% endraw %} tag, to fix the double opt-in
+  confirmation message. Used by the about layout (when footer_fixed).
+{% endcomment %}
+{% include newsletter_form.liquid margin=true %}

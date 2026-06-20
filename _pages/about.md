@@ -33,4 +33,4 @@ Since 2022, I’ve been with **EthonAI**, a Zurich-based startup building AI too
 
 Outside of work, I’m often traveling or in mountains — hiking, climbing, or skiing. I also enjoy bouldering, dancing, and the occasional deep-dive into random topics.
 
-This website is still a work in progress, but I plan to use it to share **blog posts**, thoughts, and experiments on machine learning and beyond — stay tuned!
+This website is still a work in progress, but I plan to use it to share **blog posts**, thoughts, and experiments on machine learning and beyond. If you'd like to keep up to date, subscribe to the newsletter below.

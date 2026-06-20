@@ -1,0 +1,38 @@
+{% comment %}
+  Local newsletter form, replacing the markup emitted by al_newsletter's
+  {% raw %}{% al_newsletter_form %}{% endraw %} Ruby tag. We override it only to
+  fix the post-submit message: with double opt-in the subscriber is NOT yet
+  subscribed (they must confirm via email), so "You're subscribed!" was wrong.
+
+  Faithful copy of the gem tag output (align=center) aside from that message and
+  an aria-label on the input. Re-sync against al_newsletter when bumping it.
+  Pass `margin=true` to add the about-page margin. Driven by the same
+  newsletter.js the gem ships (loaded via {% raw %}{% al_newsletter_scripts %}{% endraw %}).
+{% endcomment %}
+<div class="newsletter-form-container"{% if include.margin %} style="margin: 20px"{% endif %}>
+  <form class="newsletter-form" action="https://app.loops.so/api/newsletter-form/{{ site.newsletter.endpoint }}" method="POST" style="justify-content: center">
+    <input class="newsletter-form-input" name="newsletter-form-input" type="email" placeholder="you@example.com" aria-label="Email address" required="">
+    <button type="submit" class="newsletter-form-button" style="justify-content: center">subscribe</button>
+    <button type="button" class="newsletter-loading-button" style="justify-content: center">Please wait...</button>
+  </form>
+
+  <div class="newsletter-success" style="justify-content: center">
+    <p class="newsletter-success-message">Almost there! Check your inbox to confirm your subscription.</p>
+  </div>
+
+  <div class="newsletter-error" style="justify-content: center">
+    <p class="newsletter-error-message">Oops! Something went wrong, please try again</p>
+  </div>
+
+  <button class="newsletter-back-button" type="button" onmouseout='this.style.textDecoration="none"' onmouseover='this.style.textDecoration="underline"'>
+    &larr; Back
+  </button>
+</div>
+
+<noscript>
+  <style>
+    .newsletter-form-container {
+      display: none;
+    }
+  </style>
+</noscript>
