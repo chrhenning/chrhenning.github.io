@@ -92,4 +92,4 @@ If you treat debt as a strategic lever — one that buys learning and speed with
 
 ---
 
-_**Acknowledgements:** I've learned most of these lessons by building products hands-on, not from formal training. I'm deeply grateful to my colleagues and friends at EthonAI who joined me on this journey. I'm especially thankful to Rahul Rade, with whom I’ve worked closely since the early days of the company, and who later succeeded me as product owner. We shaped many of these insights together._
+_**Acknowledgements:** I've learned most of these lessons by building products hands-on, not from formal training. I'm deeply grateful to my colleagues and friends at Ethon who joined me on this journey. I'm especially thankful to Rahul Rade, with whom I’ve worked closely since the early days of the company, and who later succeeded me as product owner. We shaped many of these insights together._

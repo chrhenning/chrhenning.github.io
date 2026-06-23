@@ -3,7 +3,7 @@
     "name": "Christian Henning",
     "label": "Machine Learning Researcher & R&D Lead",
     "image": "",
-    "summary": "Machine learning researcher and engineer with a PhD from ETH Zurich (continual learning, Bayesian deep learning). At EthonAI, took a computer-vision product from prototype to global deployment as product owner, then made the case for a dedicated R&D function, built it, and now lead it — while writing about what it takes to bring ML from research to production. Joining AWS Professional Services as a Machine Learning Delivery Consultant in August 2026.",
+    "summary": "Machine learning researcher and engineer with a PhD from ETH Zurich (continual learning, Bayesian deep learning). At Ethon, took a computer-vision product from prototype to global deployment as product owner, then made the case for a dedicated R&D function, built it, and now lead it — while writing about what it takes to bring ML from research to production. Joining AWS Professional Services as a Machine Learning Delivery Consultant in August 2026.",
     "location": {
       "city": "Zurich",
       "countryCode": "CH",
@@ -41,29 +41,29 @@
       ]
     },
     {
-      "name": "EthonAI",
+      "name": "Ethon",
       "position": "Lead Research Scientist",
-      "url": "https://ethon.ai",
+      "url": "https://www.ethon.com",
       "location": "Zurich, Switzerland",
       "startDate": "2025-11-01",
       "endDate": "2026-06-30",
-      "summary": "Lead the R&D function and shape the technical direction of EthonAI's visual inspection product — bridging research, a full-stack product rebuild, and cross-product strategy.",
+      "summary": "Lead the R&D function and shape the technical direction of Ethon's visual inspection product — bridging research, a full-stack product rebuild, and cross-product strategy.",
       "highlights": [
-        "Oversee the rebuild of EthonAI's visual inspection product from on-premise to a cloud-native architecture, orchestrating across product design, infrastructure, and ML",
+        "Oversee the rebuild of Ethon's visual inspection product from on-premise to a cloud-native architecture, orchestrating across product design, infrastructure, and ML",
         "Set the research agenda and drive results into the product — including <a href='https://www.ethon.com/articles/why-your-next-visual-quality-inspection-system-will-be-training-free'>training-free visual inspection</a> (no per-product model training), now shaping the vision",
-        "Work to unify EthonAI's product lines and capture cross-product synergies, weighing commercial alongside technical trade-offs",
+        "Work to unify Ethon's product lines and capture cross-product synergies, weighing commercial alongside technical trade-offs",
         "Rethink how applications are distributed and kept up to date across edge deployments, easing delivery bottlenecks — with <a href='https://github.com/ethonAI/ethon-cli'>ethon-cli</a> as one concrete outcome",
         "Mentor research scientists and engineers, and help grow the team"
       ]
     },
     {
-      "name": "EthonAI",
+      "name": "Ethon",
       "position": "Senior Research Scientist",
-      "url": "https://ethon.ai",
+      "url": "https://www.ethon.com",
       "location": "Zurich, Switzerland",
       "startDate": "2025-01-01",
       "endDate": "2025-10-31",
-      "summary": "Established EthonAI's R&D function, defining its mission and processes for innovation in visual industrial AI. Enabled collaboration between research and engineering.",
+      "summary": "Established Ethon's R&D function, defining its mission and processes for innovation in visual industrial AI. Enabled collaboration between research and engineering.",
       "highlights": [
         "Designed R&D processes for scientific exploration",
         "Built infrastructure for rapid experimentation",
@@ -71,29 +71,30 @@
       ]
     },
     {
-      "name": "EthonAI",
+      "name": "Ethon",
       "position": "Product Owner",
-      "url": "https://ethon.ai",
+      "url": "https://www.ethon.com",
       "location": "Zurich, Switzerland",
       "startDate": "2023-03-01",
       "endDate": "2024-12-31",
       "summary": "Led the development of an AI-powered product for industrial anomaly detection, balancing software engineering, algorithmic innovation, and cross-functional leadership.",
       "highlights": [
         "Owned the visual-inspection product now scaled to global deployment at customers including Siemens — featured in the World Economic Forum's <a href='https://reports.weforum.org/docs/WEF_Proof_over_Promise_Insights_on_Real_World_AI_Adoption_from_2025_MINDS_Organizations_2026.pdf'>Proof over Promise</a> report (2026)",
+        "Delivered production-grade reliability, with no unplanned line stoppages reported across nearly three years of live deployment",
         "Defined and owned product roadmap in close collaboration with end-users",
-        "Managed team and coordinated engineering, research, and QA efforts",
+        "Led a cross-functional team of up to seven across engineering, research, and QA, coordinating delivery across the product",
         "Actively contributed to hiring and onboarding across the organization",
-        "Spoke on the Innovator Stage at the <a href='https://www.plusx.ai/2024'>AI+X Summit 2024</a>, a leading Swiss AI conference, on EthonAI's manufacturing AI"
+        "Spoke on the Innovator Stage at the <a href='https://www.plusx.ai/2024'>AI+X Summit 2024</a>, a leading Swiss AI conference, on Ethon's manufacturing AI"
       ]
     },
     {
-      "name": "EthonAI",
+      "name": "Ethon",
       "position": "Machine Learning Engineer",
-      "url": "https://ethon.ai",
+      "url": "https://www.ethon.com",
       "location": "Zurich, Switzerland",
       "startDate": "2022-03-01",
       "endDate": "2023-02-28",
-      "summary": "Joined as one of the first employees at EthonAI, playing a pivotal role in the initial development of its computer vision product stack.",
+      "summary": "Joined as one of the first employees at Ethon, playing a pivotal role in the initial development of its computer vision product stack.",
       "highlights": [
         "Worked across backend, frontend, ML model development, DevOps, and QA",
         "Built and deployed early prototypes used in pilot deployments",
@@ -213,6 +214,7 @@
       "level": "Advanced",
       "keywords": [
         "R&D Leadership",
+        "Team Leadership",
         "Product Ownership",
         "Research-to-Production",
         "Technical Strategy",

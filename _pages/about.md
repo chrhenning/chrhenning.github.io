@@ -29,7 +29,7 @@ I’m a **machine learning researcher and engineer**, drawn in equal measure to 
 
 I completed my PhD at **ETH Zurich**, where I worked at the intersection of **continual learning**, **Bayesian deep learning**, and **computational neuroscience** — studying how neural systems learn adaptively and robustly over time, and how those principles might translate into machine learning systems.
 
-In 2022 I joined **EthonAI**, a Zurich-based startup building AI for industrial applications, as its first employee. I led our flagship **computer vision product** for visual quality inspection from early prototype to global deployment, and as product owner shaped its roadmap through direct collaboration with users. I then made the case for a dedicated **R&D function**, deliberately separated from day-to-day product work — built it, and today lead it as **Lead Research Scientist**.
+In 2022 I joined **Ethon**, a Zurich-based startup building AI for industrial applications, as its first employee. I led our flagship **computer vision product** for visual quality inspection from early prototype to global deployment, and as product owner shaped its roadmap through direct collaboration with users. I then made the case for a dedicated **R&D function**, deliberately separated from day-to-day product work — built it, and today lead it as **Lead Research Scientist**.
 
 What it takes to move from research to shipping is also what I think and write about, though the blog ranges wider: from [research and engineering cultures](/blog/2026/before-the-breakthrough-research-engineering-cultures/) to [why ML’s notion of uncertainty is conceptually broken](/blog/2026/uncertainty-decomposition/) to the occasional wander into [minds and machines](/blog/2026/the-self-before-memory/).
 

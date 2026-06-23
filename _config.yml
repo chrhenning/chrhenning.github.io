@@ -158,13 +158,13 @@ disqus_shortname: al-folio # put your disqus shortname
 # If you have blog posts published on medium.com or other external sources,
 # you can display them in your blog by adding a link to the RSS feed.
 external_sources:
-  - name: ethon.ai
+  - name: ethon.com
     posts:
-      - url: https://ethon.ai/industrial-anomaly-detection-using-only-defect-free-images-to-train-your-model/
+      - url: https://www.ethon.com/articles/industrial-anomaly-detection-using-only-defect-free-images-to-train-your-inspection-model
         published_date: 2024-02-01
         title: "Industrial anomaly detection: Using only defect-free images to train your inspection model"
         description: "Visual inspection should not require long setup or labeling. One example should be enough to deliver reliable results. Here's how."
-      - url: https://ethon.ai/why-your-next-visual-quality-inspection-system-will-be-training-free/
+      - url: https://www.ethon.com/articles/why-your-next-visual-quality-inspection-system-will-be-training-free
         published_date: 2025-12-16
         title: "Why your next visual quality inspection system will be training-free"
         description: "Why visual inspection should rely on approaches that do not require images of defective products for training."
