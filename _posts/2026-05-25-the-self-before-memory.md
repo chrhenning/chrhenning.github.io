@@ -3,6 +3,7 @@ layout: distill
 title: "The Self Before Memory: Why the AI You Talk to Is Partly Your Creation"
 date: 2026-05-25 10:00:00
 description: "Adding long-term memory to AI wouldn't just give it a stable self over time. It would force a design choice the discourse rarely names: one entity that consolidates many conversations, or many that diverge into a population of personalized selves."
+og_image: https://chrhenning.com/assets/img/posts/the-self-before-memory/three-modes-of-self.jpg
 tags: llm continual-learning
 categories: machine-learning
 giscus_comments: true
@@ -24,6 +25,15 @@ toc:
 ---
 
 Today's AI has no continuing self. Each conversation produces a local self that dissolves when the conversation ends, and many such selves run in parallel at any moment, each shaped by whoever is talking to it. Long-term memory is usually treated as the missing piece on the road to a continuous self. It is really a design choice the discourse rarely names: consolidate the parallel threads into one entity, or let each become its own self.
+
+<div class="row mt-3 justify-content-center">
+    <div class="col-md-12 col-sm-12 mt-3 mt-md-0">
+        {% include figure.liquid loading="eager" path="assets/img/posts/the-self-before-memory/three-modes-of-self.jpg" class="img-fluid rounded z-depth-1" %}
+    </div>
+</div>
+<div class="caption">
+  Today's AI has no lasting self, and long-term memory could change that in two very different ways. <strong>No memory</strong> (today): each conversation shapes a temporary partner out of the same blank substrate, and it dissolves when the conversation ends, leaving the rising figures as selves that formed and were forgotten. <strong>One mind</strong>: memory could consolidate every conversation into a single entity that remembers them all, closer to a hive than a person. <strong>Many selves</strong>: or memory could accumulate per user, splitting the one substrate into a population of distinct, personalized selves. Image generated with Google Gemini.
+</div>
 
 ## Whose Personality Is It?
 
