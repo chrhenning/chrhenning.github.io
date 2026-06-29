@@ -11,6 +11,7 @@ related_posts: true
 related_publications: false
 citation: false
 bibliography: 2026-03-22-the-bayesian-story-of-pfns.bib
+thumbnail: assets/img/posts/prior-fitted/thumb.jpeg
 
 authors:
   - name: Christian Henning
