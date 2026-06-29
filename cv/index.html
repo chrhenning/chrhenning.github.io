@@ -156,18 +156,18 @@ initializeCookieConsent();
 
 </script> <script>
   (function () {
-    if (typeof window.gtag !== "function") return;
+    if (typeof window.gtag !== 'function') return;
     try {
       var match = document.cookie.match(/(?:^|;\s*)cc_cookie=([^;]+)/);
       if (!match) return;
       var stored = JSON.parse(decodeURIComponent(match[1]));
       var categories = (stored && stored.categories) || [];
-      if (categories.indexOf("analytics") === -1) return;
-      window.gtag("consent", "update", {
-        analytics_storage: "granted",
-        ad_storage: "denied",
-        functionality_storage: "denied",
-        personalization_storage: "denied",
+      if (categories.indexOf('analytics') === -1) return;
+      window.gtag('consent', 'update', {
+        analytics_storage: 'granted',
+        ad_storage: 'denied',
+        functionality_storage: 'denied',
+        personalization_storage: 'denied',
       });
     } catch (e) {
       /* malformed cookie: leave Consent Mode at the denied default */
