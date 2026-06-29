@@ -190,6 +190,25 @@ function initializeCookieConsent() {
 
 initializeCookieConsent();
 
+</script> <script>
+  (function () {
+    if (typeof window.gtag !== "function") return;
+    try {
+      var match = document.cookie.match(/(?:^|;\s*)cc_cookie=([^;]+)/);
+      if (!match) return;
+      var stored = JSON.parse(decodeURIComponent(match[1]));
+      var categories = (stored && stored.categories) || [];
+      if (categories.indexOf("analytics") === -1) return;
+      window.gtag("consent", "update", {
+        analytics_storage: "granted",
+        ad_storage: "denied",
+        functionality_storage: "denied",
+        personalization_storage: "denied",
+      });
+    } catch (e) {
+      /* malformed cookie: leave Consent Mode at the denied default */
+    }
+  })();
 </script> <script type="text/plain" data-category="analytics" async src="https://www.googletagmanager.com/gtag/js?id=G-B1S4NL59R1"></script> <script type="text/plain" data-category="analytics">
   window.dataLayer = window.dataLayer || [];
   function gtag() {
