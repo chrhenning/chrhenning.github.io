@@ -61,8 +61,26 @@ pagination:
 <br>
 
 <div class="container featured-posts">
-{% assign is_even = featured_posts.size | modulo: 2 %}
-<div class="row row-cols-{% if featured_posts.size <= 2 or is_even == 0 %}2{% else %}3{% endif %}">
+<style>
+  /* al-folio v1's purged Tailwind has no working `.row-cols-*`, so lay the
+     featured cards out as a responsive 2-up grid. min-width:0 lets the cards
+     shrink so the no-wrap descriptions truncate instead of forcing full width. */
+  .featured-posts > .row {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
+    margin: 0;
+  }
+  @media (min-width: 576px) {
+    .featured-posts > .row { grid-template-columns: 1fr 1fr; }
+  }
+  .featured-posts .col { margin: 0; padding: 0; }
+  .featured-posts .col,
+  .featured-posts .card > .row,
+  .featured-posts [class*="col-"],
+  .featured-posts .card-body { min-width: 0; }
+</style>
+<div class="row">
 {% for post in featured_posts %}
 <div class="col mb-4">
 <a href="{{ post.url | relative_url }}">

@@ -8,7 +8,6 @@ categories: machine-learning
 giscus_comments: true
 related_posts: true
 related_publications: true
-featured: true
 ---
 
 "Knowing what you don't know" is a phrase that's often misunderstood in Bayesian deep learning. The naive interpretation is that a model simply becomes uncertain when it encounters data different from its training set. In reality, a Bayesian model's "knowledge" is initially governed by its prior — an abstract construct that's usually far from human-interpretable. So while the model may _know_ what it doesn’t know, we humans often don’t know what _it_ knows.

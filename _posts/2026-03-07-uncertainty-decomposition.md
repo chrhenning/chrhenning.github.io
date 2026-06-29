@@ -10,6 +10,7 @@ related_posts: true
 related_publications: false
 citation: false
 bibliography: 2026-03-07-uncertainty-decomposition.bib
+featured: true
 
 authors:
   - name: Christian Henning
