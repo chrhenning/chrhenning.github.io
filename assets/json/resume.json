@@ -126,8 +126,10 @@
       "startDate": "2017-03-01",
       "endDate": "2022-02-28",
       "score": "",
-      "courses": [],
-      "summary": "Thesis: 'Knowledge uncertainty and lifelong learning in neural systems'."
+      "courses": [
+        "Thesis: 'Knowledge uncertainty and lifelong learning in neural systems'",
+        "Completed the interdisciplinary <a href='https://www.neuroscience.uzh.ch/en/education.html'>ZNZ Neuroscience Center Zurich</a> doctoral program"
+      ]
     },
     {
       "institution": "Leibniz Universität Hannover",
@@ -138,7 +140,7 @@
       "startDate": "2014-10-01",
       "endDate": "2017-01-01",
       "score": "1.0/1.0",
-      "summary": "Focus on Human-Computer-Interaction, Systems-Engineering and Theoretical Computer Science."
+      "courses": ["Focus on Human-Computer-Interaction, Systems-Engineering and Theoretical Computer Science"]
     },
     {
       "institution": "Purdue University",
@@ -158,7 +160,7 @@
       "startDate": "2011-10-01",
       "endDate": "2014-07-01",
       "score": "1.2/1.0",
-      "summary": "Best graduate of the year."
+      "courses": ["Best graduate of the year"]
     }
   ],
   "awards": [

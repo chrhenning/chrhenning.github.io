@@ -1,0 +1,29 @@
+{% comment %}
+  Override of al_folio_core's plugins/al_cookie_scripts.liquid.
+
+  The gem only wires Consent Mode to onFirstConsent/onChange, so restored
+  consent on later page loads (cookieconsent's onConsent) is missed and GA
+  page_views ship as denied (gcs=G100), which GA4 reports as ~zero. We re-read
+  the consent cookie at parse time and grant before the GA tag activates.
+{% endcomment %}
+{% al_cookie_scripts %}
+<script>
+  (function () {
+    if (typeof window.gtag !== "function") return;
+    try {
+      var match = document.cookie.match(/(?:^|;\s*)cc_cookie=([^;]+)/);
+      if (!match) return;
+      var stored = JSON.parse(decodeURIComponent(match[1]));
+      var categories = (stored && stored.categories) || [];
+      if (categories.indexOf("analytics") === -1) return;
+      window.gtag("consent", "update", {
+        analytics_storage: "granted",
+        ad_storage: "denied",
+        functionality_storage: "denied",
+        personalization_storage: "denied",
+      });
+    } catch (e) {
+      /* malformed cookie: leave Consent Mode at the denied default */
+    }
+  })();
+</script>
