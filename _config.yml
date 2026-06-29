@@ -105,6 +105,7 @@ og_image: # The site-wide (default for all links) Open Graph preview image
 # -----------------------------------------------------------------------------
 
 enable_google_analytics: true
+enable_cloudflare_analytics: true # cookieless Cloudflare Web Analytics (JS beacon, no DNS proxy required)
 analytics:
   # For Google Analytics, see https://support.google.com/analytics/answer/10447272?hl=en&ref_topic=14088998&sjid=5129943941510317771-SA#zippy=%2Cgoogle-sites
   # and follow the instructions for Google Sites. You will need to create a Google Analytics property and copy the Google tag ID.
@@ -112,6 +113,7 @@ analytics:
   cronitor: # cronitor RUM analytics site ID (format: XXXXXXXXX)
   pirsch: # your Pirsch analytics site ID (length 32 characters)
   openpanel: # your Openpanel analytics client ID (format: XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX)
+  cloudflare: c31e8be6072141d19c272380a65962dc # Cloudflare Web Analytics token — read by _includes/cloudflare_analytics.liquid, not the al_analytics gem
 
 # For Google Search Console, see https://support.google.com/webmasters/answer/9008080?hl=en#meta_tag_verification&zippy=%2Chtml-tag
 google_site_verification: XfdYQlT1Npbtc2Eq127U8DCaZS5uaW54xv3kH898iVM # your google-site-verification ID (Google Search Console)

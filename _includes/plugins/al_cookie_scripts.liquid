@@ -27,3 +27,5 @@
     }
   })();
 </script>
+{% comment %} Cookieless beacon — intentionally outside the consent gate, so it runs for all visitors. {% endcomment %}
+{% include cloudflare_analytics.liquid %}

@@ -16,6 +16,10 @@ On your first visit, a banner asks whether you accept analytics cookies. No such
 
 If you consent, this site uses [Google Analytics 4](https://analytics.google.com/) to understand how visitors use it. It may collect the pages you visit, time spent on them, your device and browser type, and your approximate location (city or country). This data is processed by Google and may be transferred abroad, including to the United States. See Google's [Privacy Policy](https://policies.google.com/privacy) for details.
 
+### Cloudflare Web Analytics
+
+This site uses [Cloudflare Web Analytics](https://www.cloudflare.com/web-analytics/) for aggregate traffic stats. It is cookieless and does not track you across sites, so it runs without consent. To produce these metrics, Cloudflare processes technical data such as your IP address (on the basis of legitimate interest), which may be transferred to the United States. See Cloudflare's [Privacy Policy](https://www.cloudflare.com/privacypolicy/).
+
 ### Hosting
 
 This website is hosted on [GitHub Pages](https://pages.github.com/), a service of GitHub, Inc. (88 Colin P. Kelly Jr. St., San Francisco, CA 94107, United States). When you visit, GitHub may process technical data such as your IP address and browser type. See GitHub's [Privacy Statement](https://docs.github.com/en/site-policy/privacy-policies/github-privacy-statement). DNS for this domain is provided by [Cloudflare](https://www.cloudflare.com/), which may process technical data such as your IP address when resolving the site's address.

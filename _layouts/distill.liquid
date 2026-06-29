@@ -13,6 +13,7 @@
   {% if site.newsletter.enabled and site.plugins contains 'al_newsletter' %}
     {% include plugins/al_newsletter_scripts.liquid %}
   {% endif %}
+  {% include cloudflare_analytics.liquid %}
   <script>
     document.addEventListener('DOMContentLoaded', function () {
       var appendix = document.querySelector('d-appendix');
