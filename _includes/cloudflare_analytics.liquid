@@ -3,6 +3,6 @@
   Production-only. Included from al_cookie_scripts.liquid and distill.liquid
   (distill bypasses scripts.liquid) so it loads on every page.
 {% endcomment %}
-{%- if site.enable_cloudflare_analytics and site.analytics.cloudflare and jekyll.environment == "production" -%}
+{%- if site.enable_cloudflare_analytics and site.analytics.cloudflare and jekyll.environment == 'production' -%}
   <script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token": "{{ site.analytics.cloudflare }}"}'></script>
 {%- endif -%}
