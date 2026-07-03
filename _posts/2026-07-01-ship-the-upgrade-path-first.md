@@ -3,6 +3,7 @@ layout: distill
 title: "Ship the Upgrade Path First: Distribution as a Control Plane for Fast Iteration"
 date: 2026-07-01 08:00:00
 description: The fastest-moving products are not the ones with the cleverest features, but the ones that can change what is already deployed. For self-hosted software that means building distribution and self-upgrade first, because without them there is no iterate step, and every cut made for the MVP quietly becomes permanent.
+og_image: https://chrhenning.com/assets/img/posts/ship-the-upgrade-path-first/dispatch-vs-checkin.jpg
 tags: distribution technical-debt
 categories: engineering
 giscus_comments: true
