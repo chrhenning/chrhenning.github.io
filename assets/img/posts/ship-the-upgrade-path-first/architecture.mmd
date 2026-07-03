@@ -1,0 +1,28 @@
+flowchart LR
+    subgraph Customer ["🖥️ Customer Infra"]
+        direction TB
+        CLI["<b>Thin CLI</b>"]
+        Env[("Local Config<br/>(owned by CLI)")]
+        Apps["Running Containers"]
+    end
+
+    subgraph Vendor ["☁️ Control Plane"]
+        API{{"<b>Distribution API</b><br/>(manifest + short-lived creds)"}}
+    end
+
+    Registry["🐳 OCI Registry<br/>(Data Plane)"]
+
+    CLI -- "1. authenticate" --> API
+    API -- "2. manifest + scoped credential" --> CLI
+    CLI -- "3. pull images + descriptor" --> Registry
+    CLI -- "4. write config" --> Env
+    CLI -- "5. deploy" --> Apps
+    Env --> Apps
+
+    classDef customer fill:#f8fafc,stroke:#64748b,stroke-width:2px,color:#334155;
+    classDef vendor fill:#f0f9ff,stroke:#0ea5e9,stroke-width:3px,color:#0369a1,font-weight:bold;
+    classDef registry fill:#ffffff,stroke:#334155,stroke-width:2px,color:#1e293b;
+
+    class CLI,Env,Apps customer;
+    class API vendor;
+    class Registry registry;

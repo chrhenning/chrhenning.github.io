@@ -3,7 +3,7 @@ layout: distill
 title: Code Sharing at Scale in Python Monorepos with a Single Version Policy
 date: 2026-02-15 10:15:00
 description: How structuring internal modules as installable packages in a monorepo enables controlled code reuse across many containers — while keeping images lean and dependency management centralized.
-tags: monorepo
+tags: monorepo technical-debt
 categories: engineering
 giscus_comments: true
 related_posts: true
