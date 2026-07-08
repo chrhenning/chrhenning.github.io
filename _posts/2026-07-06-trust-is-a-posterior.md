@@ -4,7 +4,7 @@ title: "Trust Is a Posterior: Why Good Work Can Only Be Appreciated Statisticall
 date: 2026-07-06 08:00:00
 description: A shipped feature reveals almost nothing about how well it was built, because from the outside the quality of engineering work is a credence good. Trust accumulated across many projects is the only statistically valid way to price it.
 og_image: https://chrhenning.com/assets/img/posts/trust-is-a-posterior/illustration.jpg
-tags: engineering trust
+tags: engineering technical-debt
 categories: leadership
 giscus_comments: true
 related_posts: true
@@ -94,6 +94,8 @@ Two implications follow, one for each side of the evaluation.
 If you are the one doing the work, slow credit is not the same as no credit. It means the unit that gets evaluated, including by yourself, is not the project but the portfolio. Stay in front of the same observers long enough for one to accumulate, rather than resetting the posterior at every move.
 
 If you are the one doing the evaluating, staring harder at the deliverable in front of you will not help. That leaves two honest options. Get close to the work, or borrow the view of someone who already is: read the code, sit in the design reviews, ask the people who reviewed it. Where that does not scale, aggregate: judge incident frequency across a portfolio and a stretch of time.
+
+Performance reviews make the sampling problem concrete. The projects that come to mind in the room are few and memorable ([availability heuristic](https://en.wikipedia.org/wiki/Availability_heuristic)), admitted as evidence because they are written down, while the quiet majority of the record never makes the packet. Your trust in the person's work is the summary that includes it. When the two disagree, that is not bias intruding on evidence; it is a larger sample disagreeing with a smaller one, and a reason to look at the whole record.
 
 None of the pieces here are new. Credence goods, reputation as a posterior in a repeated game, the diagnosticity of bad news: each is textbook in its own field. This post only aims them at one ordinary question, asked from both sides of the table and never answerable on the spot: was the work you shipped this quarter good enough to build on, or just good enough to ship?
 
