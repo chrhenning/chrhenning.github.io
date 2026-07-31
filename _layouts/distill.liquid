@@ -7,13 +7,13 @@
 {% if site.plugins contains 'al_folio_distill' and distill_feature_enabled %}
   {% al_folio_distill_render %}
   {% comment %}
-    distill renders its own document and skips scripts.liquid, so inject the
-    newsletter JS here (mirroring scripts.liquid's conditions).
+    distill renders its own document and skips scripts.liquid. As of
+    al_folio_distill 1.0.3 its own distill/scripts.liquid covers cookie consent
+    and analytics, but still not the newsletter, so only that is injected here.
   {% endcomment %}
   {% if site.newsletter.enabled and site.plugins contains 'al_newsletter' %}
     {% include plugins/al_newsletter_scripts.liquid %}
   {% endif %}
-  {% include cloudflare_analytics.liquid %}
   <script>
     document.addEventListener('DOMContentLoaded', function () {
       var appendix = document.querySelector('d-appendix');

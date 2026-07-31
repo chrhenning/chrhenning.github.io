@@ -2,7 +2,13 @@
   Cookieless Cloudflare Web Analytics beacon (JS snippet, no DNS proxy, no consent).
   Production-only. Included from al_cookie_scripts.liquid and distill.liquid
   (distill bypasses scripts.liquid) so it loads on every page.
+
+  al_analytics 1.0.2 can emit this beacon itself, but it wraps every provider in
+  type="text/plain" data-category="analytics" while enable_cookie_consent is true, and
+  is only injected from scripts.liquid. Both are wrong for a cookieless beacon, so the
+  token lives under site.cloudflare_beacon_token rather than site.analytics.cloudflare —
+  leaving the gem's key blank keeps it from emitting a second, consent-gated copy.
 {% endcomment %}
-{%- if site.enable_cloudflare_analytics and site.analytics.cloudflare and jekyll.environment == 'production' -%}
-  <script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token": "{{ site.analytics.cloudflare }}"}'></script>
+{%- if site.cloudflare_beacon_token and jekyll.environment == 'production' -%}
+  <script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token": "{{ site.cloudflare_beacon_token }}"}'></script>
 {%- endif -%}
