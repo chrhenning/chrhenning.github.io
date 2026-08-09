@@ -3,7 +3,7 @@
     "name": "Christian Henning",
     "label": "Machine Learning Researcher & R&D Lead",
     "image": "",
-    "summary": "Machine learning researcher and engineer with a PhD from ETH Zurich (continual learning, Bayesian deep learning). At Ethon, took a computer-vision product from prototype to global deployment as product owner, then made the case for a dedicated R&D function, built it, and now lead it — while writing about what it takes to bring ML from research to production. Joining AWS Professional Services as a Machine Learning Delivery Consultant in August 2026.",
+    "summary": "Machine learning researcher and engineer with a PhD from ETH Zurich (continual learning, Bayesian deep learning). At Ethon, took a computer-vision product from prototype to global deployment as product owner, then made the case for a dedicated R&D function, built it, and led it — while writing about what it takes to bring ML from research to production. Now a Machine Learning Delivery Consultant at AWS Professional Services.",
     "location": {
       "city": "Zurich",
       "countryCode": "CH",
@@ -34,7 +34,7 @@
       "url": "https://aws.amazon.com",
       "location": "Zurich, Switzerland",
       "startDate": "2026-08-01",
-      "summary": "Incoming role (starting August 2026) within AWS Professional Services. Helping organizations design, build, and deploy production machine learning systems.",
+      "summary": "Part of AWS Professional Services. Helping organizations design, build, and deploy production machine learning systems.",
       "highlights": [
         "Partner with customers to bring ML from prototype to production",
         "Bridge research-grade methods and real-world delivery constraints"

@@ -29,11 +29,11 @@ I’m a **machine learning researcher and engineer**, drawn in equal measure to 
 
 I completed my PhD at **ETH Zurich**, where I worked at the intersection of **continual learning**, **Bayesian deep learning**, and **computational neuroscience** — studying how neural systems learn adaptively and robustly over time, and how those principles might translate into machine learning systems.
 
-In 2022 I joined **Ethon**, a Zurich-based startup building AI for industrial applications, as its first employee. I led our flagship **computer vision product** for visual quality inspection from early prototype to global deployment, and as product owner shaped its roadmap through direct collaboration with users. I then made the case for a dedicated **R&D function**, deliberately separated from day-to-day product work — built it, and today lead it as **Lead Research Scientist**.
+In 2022 I joined **Ethon**, a Zurich-based startup building AI for industrial applications, as its first employee. I led our flagship **computer vision product** for visual quality inspection from early prototype to global deployment, and as product owner shaped its roadmap through direct collaboration with users. I then made the case for a dedicated **R&D function**, deliberately separated from day-to-day product work — built it, and led it as **Lead Research Scientist**.
 
 My writing follows the same arc, in two threads. One is about **machines that learn**: from [why ML’s notion of uncertainty is conceptually broken](/blog/2026/uncertainty-decomposition/) to the occasional wander into [minds and machines](/blog/2026/the-self-before-memory/). The other is about **systems that last**: [the debts you consciously carry](/blog/2025/mvp-manage-debt-and-iterate-fast/) while building a product, and [the invisible work that nobody rewards](/blog/2026/we-reward-the-fix-not-the-prevention/) but everything depends on.
 
-In August 2026, I’ll join **AWS Professional Services** in Zurich as a **Machine Learning Delivery Consultant**, to do the same work across many organizations rather than within a single product.
+I recently joined **AWS Professional Services** in Zurich as a **Machine Learning Delivery Consultant**, doing the same work across many organizations rather than within a single product.
 
 Outside of work, I’m often traveling or in the mountains — hiking, climbing, or skiing. I also enjoy bouldering, dancing, and the occasional deep-dive into random topics.
 
