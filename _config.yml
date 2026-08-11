@@ -15,6 +15,7 @@ footer_text: >
 keywords: christian henning, industrial ai, continual learning, bayesian neural networks, machine learning, computer vision, ai research # add your own keywords or leave empty
 lang: en # the language of your site (for example: en, fr, cn, ru, etc.)
 icon: favicon.png # the emoji used as the favicon (alternatively, provide image name in /assets/img/)
+apple_touch_icon: # image name in /assets/img/ (or a rooted path / absolute URL) used for iOS home-screen bookmarks; needs a real 180x180 PNG, since Safari ignores the emoji favicon above. Left empty, iOS falls back to a screenshot of the page.
 
 url: https://chrhenning.com # the base hostname & protocol for your site
 baseurl: # the subpath of your site, e.g. /blog/. Leave blank for root
@@ -29,8 +30,19 @@ back_to_top: true # set to false to disable the back to top button
 # repo color theme
 repo_theme_light: default # https://github.com/stats-organization/github-stats-extended/blob/master/packages/core/src/themes/README.md
 repo_theme_dark: dark # https://github.com/stats-organization/github-stats-extended/blob/master/packages/core/src/themes/README.md
+# Off by default: addresses are then split at build time so the HTML contains no
+# `user@host` and no `mailto:` for harvesters to scrape, and clicking one copies
+# it to the clipboard instead of opening a mail client.
+# See "Protecting email addresses from scrapers" in docs/CUSTOMIZE.md.
+protect_email: false
+
+# Off by default: the free public github-profile-trophy instance is disabled
+# (its Vercel deployment answers HTTP 402 / DEPLOYMENT_DISABLED), so every trophy
+# image 404s. The project itself is still open source and free — self-host it and
+# point external_services.github_profile_trophy_url at your instance, then set
+# enabled: true. See docs/CUSTOMIZE.md.
 repo_trophies:
-  enabled: false # github-profile-trophy.vercel.app deployment is disabled (HTTP 402); re-enable when a working host exists
+  enabled: false
   theme_light: flat # https://github.com/ryo-ma/github-profile-trophy
   theme_dark: gitdimmed # https://github.com/ryo-ma/github-profile-trophy
 

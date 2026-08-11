@@ -29,6 +29,8 @@ Here we will give you some tips on how to customize the website. One important t
     - [Automatic PDF Generation (RenderCV only)](#automatic-pdf-generation-rendercv-only)
   - [Modifying the user and repository information](#modifying-the-user-and-repository-information)
     - [Configuring external service URLs](#configuring-external-service-urls)
+    - [Protecting email addresses from scrapers](#protecting-email-addresses-from-scrapers)
+    - [Why trophies are off by default](#why-trophies-are-off-by-default)
       - [Migrating from github-readme-stats](#migrating-from-github-readme-stats)
   - [Creating new pages](#creating-new-pages)
   - [Creating new blog posts](#creating-new-blog-posts)
@@ -404,12 +406,60 @@ The user and repository information is defined in [\_data/repositories.yml](../_
 
 ### Configuring external service URLs
 
-The repository page uses external services to display GitHub statistics and trophies. By default, these are:
+The repository page uses external services to display GitHub statistics and trophies:
 
-- `github-stats-extended.vercel.app` for user stats and repository cards
-- `github-profile-trophy.vercel.app` for GitHub profile trophies
+- `github-stats-extended.vercel.app` for user stats and repository cards — **on by default**
+- `github-profile-trophy.vercel.app` for GitHub profile trophies — **off by default**
 
-**Important:** These default services are hosted by third parties and may not be available 100% of the time. For better reliability, privacy, and customization, you can self-host these services and configure your website to use your own instances.
+### Protecting email addresses from scrapers
+
+Set `protect_email: true` in `_config.yml` (default `false`, provided by the `al_email_protect` plugin):
+
+```yaml
+protect_email: true
+```
+
+With it on, addresses are **never emitted as addresses**. The built HTML contains no `user@host` string and no
+`mailto:` target — the two halves are carried in separate attributes and rejoined by the browser when a visitor clicks,
+which copies the address to the clipboard and shows a brief confirmation instead of opening a mail client.
+
+The build-time part is the point. An implementation that ships the plaintext and rewrites it after `DOMContentLoaded`
+protects nobody, because harvesters parse markup and do not run your JavaScript.
+
+Two behaviours worth knowing:
+
+- A value that is not a usable address (no dot in the domain, for instance) renders as an ordinary `mailto:` link
+  rather than being mangled — publishing a broken contact address is worse than publishing an unprotected one.
+- `navigator.clipboard` is unavailable outside a secure context, so over plain HTTP the runtime falls back to a hidden
+  textarea copy, and if that fails too it shows the address so it can be copied by hand.
+
+In your own layouts:
+
+```liquid
+{% al_email_protect_link site.data.socials.email %}
+```
+
+renders a click-to-copy element when enabled and a plain `mailto:` link when disabled, so it is safe to call
+unconditionally. For an address shown as text rather than a link, `{{ cv.email | al_email_obfuscate }}` gives
+`someone [at] example [dot] com`.
+
+See [al-org-dev/al-email-protect](https://github.com/al-org-dev/al-email-protect) for the full reference.
+
+### Why trophies are off by default
+
+The free public github-profile-trophy instance is currently disabled: its Vercel deployment answers `HTTP 402 / DEPLOYMENT_DISABLED`, so every trophy image fails to load. This is a hosting problem on the maintainer's side, **not** a paywall on the feature — [github-profile-trophy](https://github.com/ryo-ma/github-profile-trophy) is still open source and free to run yourself.
+
+To turn trophies back on, deploy your own instance (a free Vercel Hobby account is enough) and then:
+
+```yaml
+repo_trophies:
+  enabled: true
+
+external_services:
+  github_profile_trophy_url: https://your-instance.vercel.app
+```
+
+**Important:** All of these default services are hosted by third parties and may not be available 100% of the time — as the trophy outage shows. For better reliability, privacy, and customization, self-host them and point your site at your own instances.
 
 To use your own instances of these services, configure the URLs in [\_config.yml](../_config.yml):
 
