@@ -3,29 +3,29 @@ version: 1
 overrides:
   _includes/plugins/al_cookie_scripts.liquid:
     owner: al_folio_core
-    gem_version: 1.0.12
+    gem_version: 1.0.15
     upstream_path: _includes/plugins/al_cookie_scripts.liquid
     upstream_sha256: 20281d809141861b5d70c71df2be34f0023f95c96a06db388fa8ff9a0b6cbe4f
     local_sha256: f72e9d09437d820996d1f78b669bf4c6904a400a550061cebae732987d4e4675
-    acknowledged_at: "2026-07-31"
+    acknowledged_at: "2026-08-11"
   _includes/plugins/al_newsletter_form_center.liquid:
     owner: al_folio_core
-    gem_version: 1.0.12
+    gem_version: 1.0.15
     upstream_path: _includes/plugins/al_newsletter_form_center.liquid
     upstream_sha256: 4485dd431a1035af3708d6875825e2777ccdfe756b188c0f4fe42c8a59c3451d
     local_sha256: e07e367aa9eac104a47bcf7dc81a17af1488bd5f9e03ff66651a61f17a562712
-    acknowledged_at: "2026-07-31"
+    acknowledged_at: "2026-08-11"
   _includes/plugins/al_newsletter_form_center_margin.liquid:
     owner: al_folio_core
-    gem_version: 1.0.12
+    gem_version: 1.0.15
     upstream_path: _includes/plugins/al_newsletter_form_center_margin.liquid
     upstream_sha256: ad56039ddabf6550e6906f35f6e6ce463e61e0d50444e88b7146e09daad05b8f
     local_sha256: 4251d4872a4b26993cc7ae9ee5f74cb7f03adb5130e373b32e4108e236e12855
-    acknowledged_at: "2026-07-31"
+    acknowledged_at: "2026-08-11"
   _layouts/distill.liquid:
     owner: al_folio_core
-    gem_version: 1.0.12
+    gem_version: 1.0.15
     upstream_path: _layouts/distill.liquid
     upstream_sha256: 3610cdd2f384d05d2e30669ffc8e3696552b1fb22017a41a3224187d88f9d803
     local_sha256: 4caf01cd4898f5ea3fec32aeced68366b5883fc82b55eb61e81e581df2bd2dbe
-    acknowledged_at: "2026-07-31"
+    acknowledged_at: "2026-08-11"
