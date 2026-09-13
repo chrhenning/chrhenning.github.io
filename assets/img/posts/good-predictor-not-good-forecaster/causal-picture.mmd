@@ -1,0 +1,21 @@
+%% Render: npx -y @mermaid-js/mermaid-cli -i causal-picture.mmd -o causal-picture.png -c mermaid-config.json -b white -s 3
+flowchart TB
+    W["<b>Weather</b><br/>sun, wind,<br/>water temperature"]
+    B["<b>People at the beach</b><br/><i>not recorded</i>"]
+    I["Ice cream sales"]
+    P["Parking receipts"]
+    R["<b>Rescues</b>"]
+
+    W --> B
+    B --> I
+    B --> P
+    B --> R
+
+    classDef latent fill:#f8fafc,stroke:#94a3b8,stroke-width:2px,stroke-dasharray:6 4,color:#475569
+    classDef obs fill:#ffffff,stroke:#475569,stroke-width:2px,color:#1e293b
+    classDef target fill:#f0f9ff,stroke:#0ea5e9,stroke-width:3px,color:#0369a1
+
+    class B latent
+    class W,I,P obs
+    class R target
+    linkStyle default stroke:#64748b,stroke-width:2px

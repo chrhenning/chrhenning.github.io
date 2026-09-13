@@ -1,8 +1,8 @@
 metadata:
-  last_updated: '2026-07-24'
+  last_updated: '2026-09-13'
 papers:
   u6QSFrsAAAAJ:2osOgNQ5qMEC:
-    citations: 621
+    citations: 638
     title: Continual learning with hypernetworks
     year: '2020'
   u6QSFrsAAAAJ:LkGwnXOMwfcC:
@@ -10,15 +10,15 @@ papers:
     title: Population-level coding of avoidance learning in medial prefrontal cortex
     year: '2024'
   u6QSFrsAAAAJ:Tyk-4Ss8FVUC:
-    citations: 102
+    citations: 104
     title: Posterior Meta-Replay for Continual Learning
     year: '2021'
   u6QSFrsAAAAJ:UeHWp8X0CEIC:
-    citations: 52
+    citations: 53
     title: Neural networks with late-phase weights
     year: '2021'
   u6QSFrsAAAAJ:W7OEmFMy1HYC:
-    citations: 22
+    citations: 24
     title: On out-of-distribution detection with Bayesian neural networks
     year: '2021'
   u6QSFrsAAAAJ:Y0pCki6q_DkC:
@@ -26,7 +26,7 @@ papers:
     title: Are Bayesian neural networks intrinsically good at out-of-distribution detection?
     year: '2021'
   u6QSFrsAAAAJ:YsMSGLbcyi4C:
-    citations: 8
+    citations: 9
     title: Uncertainty estimation under model misspecification in neural network regression
     year: '2021'
   u6QSFrsAAAAJ:_FxGoFyzp5QC:
@@ -34,7 +34,7 @@ papers:
     title: Continual learning in recurrent neural networks with hypernetworks
     year: '2020'
   u6QSFrsAAAAJ:d1gkVwhDpl0C:
-    citations: 49
+    citations: 50
     title: Estimating the information gap between textual and visual representations
     year: '2018'
   u6QSFrsAAAAJ:eQOLeE2rZwMC:
@@ -50,7 +50,7 @@ papers:
     title: QBF-Solver
     year: '2014'
   u6QSFrsAAAAJ:u-x6o8ySG0sC:
-    citations: 28
+    citations: 27
     title: Approximating the Predictive Distribution via Adversarially-Trained Hypernetworks
     year: '2018'
   u6QSFrsAAAAJ:u5HHmVD_uO8C:
