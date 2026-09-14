@@ -64,7 +64,7 @@ fc_mean = skill * weather
 fc_sd = CLIM_SD * np.sqrt(1 - skill**2)
 
 fig, (ax_w, ax_r, ax_i) = plt.subplots(
-    3, 1, figsize=(8, 5.6), sharex=True, gridspec_kw={"hspace": 0.4}
+    3, 1, figsize=(8, 4.0), sharex=True, gridspec_kw={"hspace": 0.45}
 )
 
 
@@ -93,19 +93,20 @@ draw(ax_r, rescues(weather), BLUE, "Beach rescues", rescues)
 draw(ax_i, ice_cream, SLATE, "Ice cream sales")
 
 top = ax_w.get_xaxis_transform()
-ax_w.text(T_PAST - 0.03, 1.04, "measured", transform=top, ha="right", color=INK, fontsize=11)
-ax_w.text(T_PAST + 0.03, 1.04, "forecast", transform=top, ha="left", color=INK, fontsize=11)
+ax_w.text(T_PAST - 0.08, 1.04, "measured", transform=top, ha="right", color=INK, fontsize=11)
+ax_w.text(T_PAST + 0.08, 1.04, "forecast", transform=top, ha="left", color=INK, fontsize=11)
 ax_i.text(T_PAST + T_FUTURE / 2, 0.45, "no forecast", transform=ax_i.get_xaxis_transform(),
           ha="center", va="center", color=MUTED, fontsize=11)
 
 
-def arrow(day, ax_from, ax_to):
+def arrow(day, ax_from, ax_to, label, side):
     x = fig.transFigure.inverted().transform(ax_w.transData.transform((day, 0)))[0]
     down = ax_from.get_position().y0 > ax_to.get_position().y0
     upper, lower = (ax_from, ax_to) if down else (ax_to, ax_from)
-    # Stop short of the lower panel so the arrow clears its title.
-    y_hi = upper.get_position().y0 + 0.005
-    y_lo = lower.get_position().y1 + 0.035
+    # Arrows point at the afternoon peaks, clear of the titles, so they can span the gap.
+    pad = 0.04 / fig.get_figheight()  # inches
+    y_hi = upper.get_position().y0 - pad
+    y_lo = lower.get_position().y1 + pad
     start, end = (y_hi, y_lo) if down else (y_lo, y_hi)
     fig.add_artist(
         FancyArrowPatch(
@@ -118,10 +119,12 @@ def arrow(day, ax_from, ax_to):
             lw=1.1,
         )
     )
+    dx, ha = (0.012, "left") if side == "right" else (-0.012, "right")
+    fig.text(x + dx, (start + end) / 2, label, ha=ha, va="center", color=MUTED, fontsize=11)
 
 
-arrow(1.0, ax_i, ax_r)  # spurious predictor, usable only on the past
-arrow(T_PAST + 1.0, ax_w, ax_r)  # causal driver, usable ahead
+arrow(2.625, ax_i, ax_r, "only correlates", "left")  # usable only on the past
+arrow(T_PAST + 0.625, ax_w, ax_r, "causes", "right")  # usable ahead
 
 fig.savefig(
     Path(__file__).with_name("only-weather-has-a-forecast.png"),
