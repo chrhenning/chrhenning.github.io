@@ -9,7 +9,7 @@ from pathlib import Path
 import matplotlib.pyplot as plt
 import numpy as np
 from matplotlib.patches import FancyArrowPatch
-from scipy.interpolate import CubicSpline
+from scipy.interpolate import PchipInterpolator
 from scipy.stats import norm
 
 T_PAST = 3.0  # days
@@ -20,6 +20,7 @@ LEVELS = (0.5, 0.8)
 # Set by hand so the link to rescues is easy to read: hot, cold, mild, then
 # the two forecast days.
 DAILY_WEATHER = [1.0, -1.0, 0.2, 0.8, -0.6]
+PEAK = 15 / 24  # days
 
 AMBER = "#d97706"
 BLUE = "#0284c7"
@@ -45,9 +46,15 @@ def open_hours(start, end):
     return np.sin(np.pi * x) ** 1.5
 
 
-# Neutral padding days stop the spline from overshooting at the edges.
-knots = np.arange(-1, len(DAILY_WEATHER) + 1) + 0.6
-weather = CubicSpline(knots, [0.0, *DAILY_WEATHER, 0.0])(t)
+# PCHIP, unlike a cubic spline, keeps the weather's extremes on the knots.
+knots = np.arange(-1, len(DAILY_WEATHER) + 1) + PEAK
+daily = np.array([0.0, *DAILY_WEATHER, 0.0])
+weather_at = PchipInterpolator(knots, daily)
+weather = weather_at(t)
+
+
+def fade(x):
+    return np.exp(-((np.clip(x - T_PAST, 0, None) / SKILL_DAYS) ** 2))
 
 
 # Different opening hours keep rescues and sales from being trivially identical.
@@ -59,8 +66,12 @@ ice_cream = open_hours(9, 21) * np.exp(0.9 * weather)
 
 # Forecast skill fades with lead time. Rescues are monotone in the weather, so
 # weather quantiles map directly to rescue quantiles.
-skill = np.exp(-((np.clip(t - T_PAST, 0, None) / SKILL_DAYS) ** 2))
-fc_mean = skill * weather
+# Fading the daily values rather than the curve keeps forecast peaks at PEAK.
+skill = fade(t)
+i = np.searchsorted(knots, T_PAST)
+fc_mean = PchipInterpolator(
+    np.insert(knots, i, T_PAST), np.insert(fade(knots) * daily, i, weather_at(T_PAST))
+)(t)
 fc_sd = CLIM_SD * np.sqrt(1 - skill**2)
 
 fig, (ax_w, ax_r, ax_i) = plt.subplots(
@@ -103,7 +114,6 @@ def arrow(day, ax_from, ax_to, label, side):
     x = fig.transFigure.inverted().transform(ax_w.transData.transform((day, 0)))[0]
     down = ax_from.get_position().y0 > ax_to.get_position().y0
     upper, lower = (ax_from, ax_to) if down else (ax_to, ax_from)
-    # Arrows point at the afternoon peaks, clear of the titles, so they can span the gap.
     pad = 0.04 / fig.get_figheight()  # inches
     y_hi = upper.get_position().y0 - pad
     y_lo = lower.get_position().y1 + pad
@@ -123,8 +133,8 @@ def arrow(day, ax_from, ax_to, label, side):
     fig.text(x + dx, (start + end) / 2, label, ha=ha, va="center", color=MUTED, fontsize=11)
 
 
-arrow(2.625, ax_i, ax_r, "only correlates", "left")  # usable only on the past
-arrow(T_PAST + 0.625, ax_w, ax_r, "causes", "right")  # usable ahead
+arrow(2 + PEAK, ax_i, ax_r, "only correlates", "left")
+arrow(T_PAST + PEAK, ax_w, ax_r, "causes", "right")
 
 fig.savefig(
     Path(__file__).with_name("only-weather-has-a-forecast.png"),
