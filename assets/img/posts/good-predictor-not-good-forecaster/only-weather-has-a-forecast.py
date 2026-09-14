@@ -89,7 +89,7 @@ def draw(ax, observed, color, name, forecast=None):
 
 
 draw(ax_w, weather, AMBER, "Weather", lambda w: w)
-draw(ax_r, rescues(weather), BLUE, "Rescues", rescues)
+draw(ax_r, rescues(weather), BLUE, "Beach rescues", rescues)
 draw(ax_i, ice_cream, SLATE, "Ice cream sales")
 
 top = ax_w.get_xaxis_transform()
