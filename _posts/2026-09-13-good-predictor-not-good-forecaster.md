@@ -11,6 +11,7 @@ related_posts: true
 related_publications: false
 citation: false
 bibliography: 2026-09-13-good-predictor-not-good-forecaster.bib
+thumbnail: assets/img/posts/good-predictor-not-good-forecaster/a-week-ahead-thumb.png
 
 authors:
   - name: Christian Henning
