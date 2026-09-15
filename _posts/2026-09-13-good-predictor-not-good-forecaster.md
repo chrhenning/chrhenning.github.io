@@ -59,13 +59,22 @@ Now ask about next Thursday. The model first needs next Thursday's ice cream sal
 
 The usual workaround is to predict next week's rescues from this week's records. But next Thursday's crowd depends on next Thursday's weather, which none of these records contain, so the model can do little better than guess from the season. The missing weather has to come from outside the data.
 
+<div class="row mt-3 justify-content-center">
+    <div class="col-md-10 col-sm-12 mt-3 mt-md-0">
+        {% include figure.liquid loading="lazy" path="assets/img/posts/good-predictor-not-good-forecaster/a-week-ahead.png" class="img-fluid rounded z-depth-1" %}
+    </div>
+</div>
+<div class="caption">
+    <b>This week's records cannot forecast next week's rescues.</b> Same-day ice cream sales track rescues closely. Shifted by a week, as the shaded band shows for sales, neither sales nor the weather tracks them.
+</div>
+
 There is a second problem. A learned relationship holds only as long as the world that produced it, and the world changes. If the most popular ice cream stand closes, a busy day sells like a quiet day used to, and any model built on ice cream sales staffs for a quiet beach. A model built on the weather is unaffected, because closing a stand changes neither the weather nor how many people it draws. Since a forecast lies beyond the data, no error on past data can reveal such a shift before it happens. This is the sense in which forecasting is often out-of-distribution.<d-footnote>Such shifts are ruled out only under stationarity, where the distribution of any stretch of the series does not depend on when it starts. Relationships learned from the past then keep holding, although the model still needs its future inputs.</d-footnote>
 
 The model's uncertainty cannot be relied on to flag the shift either. As I argued in an [earlier post on uncertainty](/blog/2026/uncertainty-decomposition/), such estimates are only as sound as the model's assumptions.
 
 ## Where Prior Knowledge Attaches
 
-Ask a lifeguard how busy next Thursday will be, and they will check the weather forecast. That forecast does not come from the town's weather records, which extrapolate no better than past sales, but from meteorology, built on physics, instruments, and satellites. Ice cream sales have no such science behind them. Knowledge that reaches beyond the data comes from outside it, whether a physical model, a holiday calendar, or a festival booked for next Thursday.
+Ask a lifeguard how busy next Thursday will be, and they will check the weather forecast. That forecast does not come from the town's weather records, which extrapolate no better than past sales, but from meteorology, built on physics, instruments, and satellites.<d-footnote>Since a weather forecast can be computed, a powerful enough model should be able to learn it, and machine learning models such as GraphCast <d-cite key="lam2023graphcast"></d-cite> now rival physics-based forecasts. But they learn from decades of temperature, wind, and humidity reconstructed at many heights across the whole globe, and each forecast starts from the current state of the atmosphere, estimated from satellites, weather balloons, and ground stations. A model trained on this week's records to predict next week's rescues sees none of this, so however powerful it is, it cannot learn the weather forecast along the way.</d-footnote> Ice cream sales have no such science behind them. Knowledge that reaches beyond the data comes from outside it, whether a physical model, a holiday calendar, or a festival booked for next Thursday.
 
 Two pieces of knowledge are at work. By uncovering the structure behind the data, the causal picture guides you to the variable worth forecasting, the weather rather than ice cream sales. More generally, you follow the arrows back until you reach a variable whose future someone can actually forecast.<d-footnote>In symbols, with $r$ for rescues and $w$ for the weather, the rescue forecast is $p(r_{t+h} \mid \text{past}) = \int p(r_{t+h} \mid w_{t+h})\, p(w_{t+h} \mid \text{past})\, dw_{t+h}$. The first factor is learned from the town's records and the second comes from meteorology, so any uncertainty in the weather forecast carries into the rescue forecast.</d-footnote> A model of the weather's dynamics then carries it forward in time, the same kind of knowledge that lets astronomers forecast a comet's path years ahead without any machine learning.
 
