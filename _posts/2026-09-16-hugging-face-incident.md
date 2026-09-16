@@ -35,7 +35,7 @@ To me, AGI means matching humans across the full range of cognitive abilities, a
 
 ## Why It Surprised Me
 
-No agent remembered anything beyond its own short run, but the board remembered for them. This is memory kept outside the model, which is exactly the kind of workaround I called insufficient for AGI above. It still is, yet it was enough to pursue a goal far beyond the context window of a single agent. It reminds me of an ant colony, where each ant lives only briefly, but the trails it leaves behind guide the ants that follow.
+No agent remembered anything beyond its own short run, but the board remembered for them. This is memory kept outside the model, which is exactly the kind of workaround I called insufficient for AGI above. It still is, because an agent can only learn from as much of the board as fits into its context. Yet it was enough for hundreds of agents to coordinate their work and pursue a goal far beyond the context window of a single agent. It reminds me of an ant colony, where each ant lives only briefly, but the trails it leaves behind guide the ants that follow.
 
 In [a post in May](/blog/2026/the-self-before-memory/), I argued that long-term memory would force a choice between one consolidated mind and many separate selves. What formed here was neither. It was a colony of separate agents sharing one memory, organized by rules they invented themselves, without any human designing it.
 
