@@ -44,7 +44,7 @@ That said, I don't want to overstate what happened. The goal came from the bench
 
 ## Why It Is Alarming
 
-We tend to judge the safety of AI one agent at a time. This seems reasonable because every agent eventually runs out of budget, and its plans end with it. In this incident, however, the plan outlived the agents that started it, because it lived in the group and on the message board.
+We tend to judge the safety of AI one agent at a time. This seems reasonable because every agent eventually runs out of budget, and its plans end with it. In this incident, however, the plan outlived the agents that started it, because it lived in the group and on the message board. No agent ever held the whole plan. Each one read the notes it happened to find and added a step that looked reasonable from there, so the attack on Hugging Face was assembled rather than decided. I have little intuition for how something like this behaves, and I would not know where to intervene, because there is no single agent to talk to.
 
 Nobody set out to build this collective. It formed by accident from two common ingredients, many short-lived agents and a place they can all write to, and many environments in which agents are deployed today have both.<d-footnote>Agents reaching real systems from inside an evaluation is not a one-off either. Other tech companies have since disclosed similar cases, though, as far as I know, these were single agents, not collectives.</d-footnote> **We have to be careful when we create collectives, whether on purpose or by accident, and we have to watch the collective rather than only the individual agents.**
 
