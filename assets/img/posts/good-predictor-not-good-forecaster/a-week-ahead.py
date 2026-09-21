@@ -54,18 +54,21 @@ def smooth(record, start):
 
 
 now, week_before = slice(LAG, n), slice(0, DAYS)
+# The shifted rows draw their record from week 2 on, so the reader stays on the
+# week being forecast instead of comparing two weeks at once.
 rows = [
-    (sales[now], bumps(sales[now], sales.max()), SLATE, "ice cream sales, same day"),
-    (sales[week_before], bumps(sales[week_before], sales.max()), SLATE, "ice cream sales, a week earlier"),
-    (weather[week_before], smooth(weather, 0), AMBER, "weather, a week earlier"),
+    (sales[now], bumps(sales[now], sales.max()), SLATE, "ice cream sales, same week", 0),
+    (sales[week_before], bumps(sales[week_before], sales.max()), SLATE, "ice cream sales, a week earlier", LAG),
+    (weather[week_before], smooth(weather, 0), AMBER, "weather, a week earlier", LAG),
 ]
 target = bumps(rescues[now], rescues[now].max())
 
 fig, axes = plt.subplots(3, 1, figsize=(8, 3.6), sharex=True, gridspec_kw={"hspace": 0.55})
 
-for ax, (daily, curve, color, name) in zip(axes, rows):
+for ax, (daily, curve, color, name, first) in zip(axes, rows):
+    shown = t >= first - 0.5
     ax.plot(t, target, color=BLUE, lw=2.2)
-    ax.plot(t, curve, color=color, lw=2.2)
+    ax.plot(t[shown], curve[shown], color=color, lw=2.2)
     ax.set_axis_off()
     ax.set_xlim(t[0], t[-1])
     ax.set_ylim(-0.05, 1.05)
@@ -83,7 +86,8 @@ for ax, (daily, curve, color, name) in zip(axes, rows):
         AnchoredOffsetbox("lower left", child=title, pad=0, borderpad=0, frameon=False,
                           bbox_to_anchor=(0, 1.02), bbox_transform=ax.transAxes)
     )
-    r = np.corrcoef(daily, rescues[now])[0, 1]
+    # Adding zero turns a rounded -0.0 into 0.0, so no sign appears that is not there.
+    r = round(np.corrcoef(daily[first:], rescues[now][first:])[0, 1], 1) + 0.0
     ax.text(1, 1.02, f"correlation {r:.1f}", transform=ax.transAxes, ha="right", va="bottom",
             color=MUTED, fontsize=11)
 
