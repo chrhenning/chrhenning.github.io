@@ -66,7 +66,7 @@ The usual workaround is to predict next week's rescues from this week's records.
     </div>
 </div>
 <div class="caption">
-    <b>This week's records cannot forecast next week's rescues.</b> Same-day ice cream sales track rescues closely. Shifted by a week, as the shaded band shows for sales, neither sales nor the weather tracks them.
+    <b>This week's records cannot forecast next week's rescues.</b> Ice cream sales from the same week track rescues closely. Shifted by a week, as the shaded band shows for sales, neither sales nor the weather tracks them.
 </div>
 
 There is a second problem. A learned relationship holds only as long as the world that produced it, and the world changes. If the most popular ice cream stand closes, a busy day sells like a quiet day used to, and any model built on ice cream sales staffs for a quiet beach. A model built on the weather is unaffected, because closing a stand changes neither the weather nor how many people it draws. Since a forecast lies beyond the data, no error on past data can reveal such a shift before it happens. This is the sense in which forecasting is often out-of-distribution.<d-footnote>Such shifts are ruled out only under stationarity, where the distribution of any stretch of the series does not depend on when it starts. Relationships learned from the past then keep holding, although the model still needs its future inputs.</d-footnote>
