@@ -1,12 +1,12 @@
 metadata:
-  last_updated: '2026-09-13'
+  last_updated: '2026-09-25'
 papers:
   u6QSFrsAAAAJ:2osOgNQ5qMEC:
-    citations: 638
+    citations: 641
     title: Continual learning with hypernetworks
     year: '2020'
   u6QSFrsAAAAJ:LkGwnXOMwfcC:
-    citations: 27
+    citations: 28
     title: Population-level coding of avoidance learning in medial prefrontal cortex
     year: '2024'
   u6QSFrsAAAAJ:Tyk-4Ss8FVUC:
@@ -34,7 +34,7 @@ papers:
     title: Continual learning in recurrent neural networks with hypernetworks
     year: '2020'
   u6QSFrsAAAAJ:d1gkVwhDpl0C:
-    citations: 50
+    citations: 51
     title: Estimating the information gap between textual and visual representations
     year: '2018'
   u6QSFrsAAAAJ:eQOLeE2rZwMC:
