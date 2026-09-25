@@ -5,11 +5,13 @@ date: 2026-09-25 10:00:00
 description: Conformal prediction guarantees coverage, but coverage can be exactly right and still uninformative, like accuracy on an imbalanced dataset. The sets only surface the uncertainty a model already has, so the real work is still in the model.
 tags: uncertainty statistics
 categories: machine-learning
+og_image: https://chrhenning.com/assets/img/posts/conformal-prediction/misfit.png
 giscus_comments: true
 related_posts: true
 related_publications: false
 citation: false
 bibliography: 2026-09-25-conformal-prediction.bib
+thumbnail: assets/img/posts/conformal-prediction/lane-split-thumb.jpg
 
 authors:
   - name: Christian Henning
