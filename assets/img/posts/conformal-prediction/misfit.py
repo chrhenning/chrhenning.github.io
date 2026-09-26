@@ -40,7 +40,7 @@ def make_wrong_mean():
     std = np.std(y - fit(x))  # max-likelihood fixed variance of the linear-Gaussian model
     return dict(
         title="Wrong mean",
-        subtitle="a straight line fit to a mean with a bump",
+        subtitle="model misspecification",
         sample=sample, true_mu=mu, mu=fit, scale=lambda x: np.full_like(x, std),
     )
 
@@ -48,12 +48,15 @@ def make_wrong_mean():
 def make_wrong_spread():
     mu = lambda x: 0.35 * np.sin(2 * np.pi * x)
     sigma = lambda x: 0.03 + 0.12 / (1 + np.exp(-(x - 0.85) / 0.04))
-    sample = lambda n: (lambda x: (x, mu(x) + sigma(x) * rng.standard_normal(n)))(
-        rng.uniform(0, 1, n))
+    draw = lambda x: (x, mu(x) + sigma(x) * rng.standard_normal(len(x)))
+    sample = lambda n: draw(rng.uniform(0, 1, n))
+    # Few training points at the ends pin the mean but not the spread.
     return dict(
         title="Wrong spread",
-        subtitle="the right mean, but the noise expected on the wrong side",
+        subtitle="model misfit",
         sample=sample, true_mu=mu, mu=mu, scale=lambda x: sigma(1 - x),
+        train=draw(np.concatenate([rng.uniform(0.25, 0.7, 40), rng.uniform(0, 0.25, 3),
+                                   rng.uniform(0.7, 1, 4)])),
     )
 
 
@@ -71,7 +74,12 @@ for ax, case in zip(axes, (make_wrong_mean(), make_wrong_spread())):
 
     ax.fill_between(xg, mu(xg) - q * scale(xg), mu(xg) + q * scale(xg), color=SET_PALE, lw=0,
                     zorder=0)
-    ax.scatter(xt[:N_SHOW], yt[:N_SHOW], s=22, color=INK2, alpha=0.55, lw=0, zorder=1)
+    if "train" in case:
+        n, color, alpha = 2 * N_SHOW, POINT, 0.55
+        ax.scatter(*case["train"], s=22, color=INK2, alpha=0.9, lw=0, zorder=1)
+    else:
+        n, color, alpha = N_SHOW, INK2, 0.9
+    ax.scatter(xt[:n], yt[:n], s=22, color=color, alpha=alpha, lw=0, zorder=1)
     ax.plot(xg, case["true_mu"](xg), color=POINT, lw=2, zorder=2)
     ax.plot(xg, mu(xg), color=SET, lw=2, zorder=3)
     for sign in (-1, 1):
@@ -92,13 +100,14 @@ for ax, case in zip(axes, (make_wrong_mean(), make_wrong_spread())):
     print(f"{case['title']}: coverage {covered.mean():.3f}")
 
 handles = [
-    Line2D([], [], ls="", marker="o", ms=5, color=INK2, alpha=0.55, label="data"),
+    Line2D([], [], ls="", marker="o", ms=5, color=INK2, alpha=0.9, label="training data"),
+    Line2D([], [], ls="", marker="o", ms=5, color=POINT, alpha=0.55, label="other data"),
     Line2D([], [], color=POINT, lw=2, label="true mean"),
     Line2D([], [], color=SET, lw=2, label="model mean"),
     Line2D([], [], color=SET, lw=1, ls=(0, (3, 2.5)), label="± 1 model std"),
     Patch(color=SET_PALE, label="conformal set, 90% overall"),
 ]
-fig.legend(handles=handles, loc="lower center", ncol=5, frameon=False, fontsize=14,
-           bbox_to_anchor=(0.5, 0.005), columnspacing=2.2)
+fig.legend(handles=handles, loc="lower center", ncol=6, frameon=False, fontsize=13,
+           bbox_to_anchor=(0.5, 0.005), columnspacing=1.6)
 fig.tight_layout(rect=(0, 0.08, 1, 0.88), w_pad=5)
 fig.savefig(Path(__file__).with_suffix(".png"), dpi=180, facecolor=SURFACE)
