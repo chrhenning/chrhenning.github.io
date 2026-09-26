@@ -21,7 +21,7 @@ authors:
 toc:
   - name: How Conformal Prediction Works
   - name: A Wrapper Cannot Fix the Model
-  - name: Where It Goes Wrong
+  - name: Some Pitfalls to Watch For
   - name: What It Is Good For
 ---
 
@@ -59,14 +59,14 @@ which simply thresholds the model's predicted probabilities. What conformal pred
     </div>
 </div>
 <div class="caption">
-    <b>Conformal prediction fixes neither a misspecified model nor a poor fit.</b> Left: a model with a linear mean, which cannot represent data with a bump. Right: a model that can represent noise that changes with the input, but is fit poorly and expects the noise where the data is quiet rather than where it is noisy. The conformal set follows this wrong spread. Both sets cover 90% of the data overall, yet they are too wide where the model is fine and miss where it is wrong: on the bump and at the noisy end.
+    <b>Conformal prediction fixes neither a misspecified model nor a poor fit.</b> Left: a model with a linear mean, which cannot represent data with a bump. Right: a model that can represent noise that changes with the input, but has not seen enough data. Where data is sparse, its inductive bias decides the spread, and it expects the noise where the data is quiet rather than where it is noisy. The conformal set follows this wrong spread. Both sets cover 90% of the data overall, yet wherever the model is wrong, the set is too wide or too narrow.
 </div>
 
 The left model is a classic regression model: a Gaussian with a constant variance and a mean that is linear in the input. Since the data has a bump, the model is misspecified. The right model is heteroscedastic: it also predicts the variance at each input. It could capture the noise, but it is fit poorly.
 
 Both use a score that divides the error by the model's standard deviation $\sigma(x)$, so the conformal set is $f(x) \pm \hat q\,\sigma(x)$. The shape of the set comes from the model, and conformal prediction only scales it. Wherever the model is wrong, so is the set, even though it covers 90% overall.<d-footnote>A cleverer conformal method cannot fix this. For continuous inputs, no distribution-free method can guarantee coverage at each input, known as conditional coverage, unless its sets have infinite expected width <d-cite key="barber2021limits"></d-cite>. Coverage at each input needs assumptions about the data, and a model is where those assumptions live.</d-footnote>
 
-## Where It Goes Wrong
+## Some Pitfalls to Watch For
 
 Since the part that depends on the input comes from the model, the typical failures of conformal prediction are failures of the model.
 
