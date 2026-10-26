@@ -84,8 +84,7 @@
         "Delivered production-grade reliability, with no unplanned line stoppages reported across nearly three years of live deployment",
         "Defined and owned product roadmap in close collaboration with end-users",
         "Led a cross-functional team of up to seven across engineering, research, and QA, coordinating delivery across the product",
-        "Actively contributed to hiring and onboarding across the organization",
-        "Spoke on the Innovator Stage at the <a href='https://www.plusx.ai/2024'>AI+X Summit 2024</a>, a leading Swiss AI conference, on Ethon's manufacturing AI"
+        "Actively contributed to hiring and onboarding across the organization"
       ]
     },
     {
@@ -189,6 +188,38 @@
       "title": "Deutschlandstipendium",
       "date": "2012",
       "awarder": "Scholarship from the National Scholarship Program."
+    }
+  ],
+  "talks": [
+    {
+      "title": "What Uncertainty in ML Can and Cannot Tell Us",
+      "event": "Invited talk, Institute of Computer Research, University of Alicante",
+      "date": "2026-10-23",
+      "slides": "/assets/pdf/uncertainty_talk_alicante_2026.pdf"
+    },
+    {
+      "title": "The Next Frontier in AI-Powered Industrial Anomaly Detection",
+      "event": "Innovator Stage, AI+X Summit 2024, Zurich",
+      "url": "https://www.plusx.ai/2024",
+      "date": "2024-10-03"
+    },
+    {
+      "title": "Posterior Meta-Replay for Continual Learning",
+      "event": "ContinualAI Seminar",
+      "video": "https://www.youtube.com/watch?v=IF5twAVZ4Ns",
+      "date": "2022-02-24"
+    },
+    {
+      "title": "Are Bayesian Neural Networks Intrinsically Good at Out-of-Distribution Detection?",
+      "event": "Spotlight talk, ICML 2021 Workshop on Uncertainty and Robustness in Deep Learning",
+      "slides": "/assets/pdf/bayesian_ood_talk_udl_2021_public.pdf",
+      "date": "2021-07-23"
+    },
+    {
+      "title": "Continual Learning in Recurrent Neural Networks",
+      "event": "ContinualAI Reading Group",
+      "video": "https://www.youtube.com/watch?v=sFNAXF8H0IY",
+      "date": "2020-11-13"
     }
   ],
   "volunteer": [

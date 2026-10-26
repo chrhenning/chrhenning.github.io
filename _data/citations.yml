@@ -1,8 +1,8 @@
 metadata:
-  last_updated: '2026-09-25'
+  last_updated: '2026-10-26'
 papers:
   u6QSFrsAAAAJ:2osOgNQ5qMEC:
-    citations: 641
+    citations: 650
     title: Continual learning with hypernetworks
     year: '2020'
   u6QSFrsAAAAJ:LkGwnXOMwfcC:
@@ -10,11 +10,11 @@ papers:
     title: Population-level coding of avoidance learning in medial prefrontal cortex
     year: '2024'
   u6QSFrsAAAAJ:Tyk-4Ss8FVUC:
-    citations: 104
+    citations: 107
     title: Posterior Meta-Replay for Continual Learning
     year: '2021'
   u6QSFrsAAAAJ:UeHWp8X0CEIC:
-    citations: 53
+    citations: 54
     title: Neural networks with late-phase weights
     year: '2021'
   u6QSFrsAAAAJ:W7OEmFMy1HYC:
@@ -22,7 +22,7 @@ papers:
     title: On out-of-distribution detection with Bayesian neural networks
     year: '2021'
   u6QSFrsAAAAJ:Y0pCki6q_DkC:
-    citations: 22
+    citations: 23
     title: Are Bayesian neural networks intrinsically good at out-of-distribution detection?
     year: '2021'
   u6QSFrsAAAAJ:YsMSGLbcyi4C:
@@ -42,7 +42,7 @@ papers:
     title: Knowledge uncertainty and lifelong learning in neural systems
     year: '2022'
   u6QSFrsAAAAJ:qjMakFHDy7sC:
-    citations: 70
+    citations: 71
     title: Continual Learning in Recurrent Neural Networks
     year: '2021'
   u6QSFrsAAAAJ:roLk4NBRz8UC:
