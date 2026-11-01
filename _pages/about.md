@@ -25,7 +25,7 @@ latest_posts:
   limit: 3 # leave blank to include all the blog posts
 ---
 
-I’m a **machine learning researcher and engineer**, drawn in equal measure to thinking deeply about frontier ML and to building systems that hold up in the real world. I also have broad interests in statistics, neuroscience, and cognitive science.
+I’m a **machine learning researcher and engineer**. I enjoy thinking deeply about frontier ML as much as building systems that hold up in the real world. I also have broad interests in statistics, neuroscience, and cognitive science.
 
 I completed my PhD at **ETH Zurich**, where I worked at the intersection of **continual learning**, **Bayesian deep learning**, and **computational neuroscience** — studying how neural systems learn adaptively and robustly over time, and how those principles might translate into machine learning systems.
 
@@ -37,4 +37,4 @@ This site is mainly a blog, and it runs in two threads. One is about **machines 
 
 Outside of work, I’m often traveling or in the mountains — hiking, climbing, or skiing. I also enjoy bouldering, dancing, and the occasional deep-dive into random topics.
 
-If you’d like to keep up to date, subscribe to the newsletter below.
+If you’d like to hear about new posts, subscribe to the newsletter below.
